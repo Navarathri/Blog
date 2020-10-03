@@ -20,7 +20,6 @@ home = ["HTML", "RSS", "Algolia"]
   description = "tayu_tayu"
   keyword = "Istio, Kubernetes"
   slogan = "あああ"
-
   twitter_name = "tayu_tayu"
 
   image_404 = "img/404-bg.jpg"
@@ -67,41 +66,10 @@ home = ["HTML", "RSS", "Algolia"]
   #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
 
   [params.social]
-  rss            = true
+  rss            = false
   email          = "youremail@gmail.com"
-  #facebook      = "full profile url in facebook"
-  #googleplus    = "full profile url in googleplus"
   #twitter       = "full profile url in twitter"
-  linkedin       = ""
-  stackoverflow  = ""
-  #instagram     = "full profile url in instagram"
-  github         = ""
-  wechat         = ""
-#  medium         = "full profile url in medium"
-  #pinterest     = "full profile url in pinterest"
-  #reddit        = "full profile url in reddit"
-  #gitlab        = "full profile url in gitlab"
-  #mastodon      = "full profile url in mastodon"
-  #keybase       = "full profile url in keybase"
-  #xing          = "https://www.xing.com/profile/yourxingid"
-  #git           = "full profile url for git user"
-
-  [[params.friend_link]]
-  title = "Linda的博客"
-  href =  "https://zhaozhihan.com"
-
-  [[params.bookmark_link]]
-  title =  "Martin Fowler"
-  href =  "https://martinfowler.com"
-  [[params.bookmark_link]]
-  title = "ServiceMesher"
-  href =  "http://www.servicemesher.com"
-  [[params.bookmark_link]]
-  title =  "Pxhere"
-  href = "https://pxhere.com"
-  [[params.bookmark_link]]
-  title = "unsplash"
-  href = "https://unsplash.com"
+  # github         = ""
 
   [[params.addtional_menus]]
   title =  "BOOKS"
