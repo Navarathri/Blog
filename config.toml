@@ -1,7 +1,7 @@
 baseURL = "https://Navarathri.github.io/blog"
 title = "たくあんは食べ物。"
 languageCode = "ja"
-theme = "hugo-theme-cleanwhite"
+theme = "hugo-theme-blueberry-detox"
 publishDir = "docs"
 
 # Enable comments by entering your Disqus shortname
@@ -15,11 +15,14 @@ hasCJKLanguage = true
 home = ["HTML", "RSS", "Algolia"]
 
 [params]
-  header_image = "img/home-bg-jeep.jpg"
+  author = "tayu_tayu"
+  header_image = "img/home-banner/home-bg-jeep.jpg"
   SEOTitle = "たくあんは食べ物。 | tayu_tayu Blog"
-  description = "ブログ説明"
-  keyword = "赵化冰, zhaohuabing, Zhaohuabing, , 赵化冰的网络日志, 赵化冰的博客, Zhaohuabing Blog, 博客, 个人网站, 互联网, Web, 云原生, PaaS, Istio, Kubernetes, 微服务, Microservice"
+  description = "@tayu_tayu"
+  keyword = "PaaS, Istio, Kubernetes"
   slogan = "あああ"
+
+  twitter_name = "tayu_tayu"
 
   image_404 = "img/404-bg.jpg"
   title_404 = "ページが見つかりません。 :("
