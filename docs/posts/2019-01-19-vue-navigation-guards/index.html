@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="tayu_tayu">
+  
+	
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:creator" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:domain" content="https://Navarathri.github.io/blog">
+	
+        <meta property="og:site_name" content="たくあんは食べ物。">
+        <meta property="og:title" content="たくあんは食べ物。">
+        <meta property="og:url" content="https://Navarathri.github.io/blog/posts/2019-01-19-vue-navigation-guards/">
+        <meta property="og:description" content="tayu_tayu">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="tayu_tayu" />
+        <meta property="og:article:published_time" content="2019-01-25T09:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.75.1" />
+  <title>VueのNavigation Guards &middot; たくあんは食べ物。</title>
+  <link rel="canonical" href="https://Navarathri.github.io/blog" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS"
+    href=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://Navarathri.github.io/blog/css/main.css"
+  />
+  <link
+    href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    rel="stylesheet"
+  />
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="https://Navarathri.github.io/blog" alt="たくあんは食べ物。"><h1 class="blog-title heading">たくあんは食べ物。</h1></a>
+            <p class="blog-description">tayu_tayu</p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="posts">
+	<header class="post-header">
+        <h3 class="p-post-title">VueのNavigation Guards</h3>
+    </header>
+
+    <section class="post-content">
+        <p>Navigation guards are provided by <code>vue-router</code>.
+Three ways to hook:</p>
+<ul>
+<li>globally</li>
+<li>per-route</li>
+<li>in-component</li>
+</ul>
+<p><strong>NOTE:</strong></p>
+<ol>
+<li>Params or query changes won&rsquo;t trigger enter/leave navigation guards. You can either watch the <code>$route</code> object to react to those changes, or use the <code>beforeRouteUpdate</code> in-component guard.</li>
+<li>Make sure to always call the next function, otherwise the hook will never be resolved.</li>
+</ol>
+<h2 id="global">Global</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#ff79c6">const</span> router <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> VueRouter({ ... })
+
+<span style="color:#6272a4">// Before Guards
+</span><span style="color:#6272a4"></span>router.beforeEach((to, from, next) =&gt; {
+  <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>})
+
+<span style="color:#6272a4">// Resolve Guards
+</span><span style="color:#6272a4">// beforeResolve guards will be called right before the navigation is confirmed
+</span><span style="color:#6272a4">// after all in-component guards and async route components are resolved
+</span><span style="color:#6272a4"></span>router.beforeResolve((to, from, next) =&gt; {
+  <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>})
+
+<span style="color:#6272a4">// After Hooks
+</span><span style="color:#6272a4"></span>router.afterEach((to, from) =&gt; {
+  <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>})
+</code></pre></div><h2 id="pre-reoute">Pre-reoute</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#ff79c6">const</span> router <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> VueRouter({
+  routes<span style="color:#ff79c6">:</span> [
+    {
+      path<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;/foo&#39;</span>,
+      component<span style="color:#ff79c6">:</span> Foo,
+      beforeEnter<span style="color:#ff79c6">:</span> (to, from, next) =&gt; {
+        <span style="color:#6272a4">// ...
+</span><span style="color:#6272a4"></span>      }
+    }
+  ]
+})
+</code></pre></div><h2 id="in-component">In-component</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#ff79c6">const</span> Foo <span style="color:#ff79c6">=</span> {
+  template<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">`...`</span>,
+  beforeRouteEnter (to, from, next) {
+    <span style="color:#6272a4">// called before the route that renders this component is confirmed.
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// does NOT have access to `this` component instance,
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// because it has not been created yet when this guard is called!
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// However, you can access the instance by passing a callback to next. 
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// The callback will be called when the navigation is confirmed
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// and the component instance will be passed to the callback as the argument
+</span><span style="color:#6272a4"></span>    beforeRouteEnter (to, from, next) {
+      next(vm =&gt; {
+        <span style="color:#6272a4">// access to component instance via `vm`
+</span><span style="color:#6272a4"></span>      })
+    }
+  },
+  beforeRouteUpdate (to, from, next) {
+    <span style="color:#6272a4">// called when the route that renders this component has changed,
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// but this component is reused in the new route.
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// For example, for a route with dynamic params `/foo/:id`, when we
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// navigate between `/foo/1` and `/foo/2`, the same `Foo` component instance
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// will be reused, and this hook will be called when that happens.
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// has access to `this` component instance.
+</span><span style="color:#6272a4"></span>  },
+  beforeRouteLeave (to, from, next) {
+    <span style="color:#6272a4">// called when the route that renders this component is about to
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// be navigated away from.
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// has access to `this` component instance.
+</span><span style="color:#6272a4"></span>  }
+}
+</code></pre></div><h2 id="resolve-flow">Resolve flow</h2>
+<ul>
+<li>Navigation triggered.</li>
+<li>Call leave guards in deactivated components.</li>
+<li>Call global beforeEach guards.</li>
+<li>Call beforeRouteUpdate guards in reused components.</li>
+<li>Call beforeEnter in route configs.</li>
+<li>Resolve async route components.</li>
+<li>Call beforeRouteEnter in activated components.</li>
+<li>Call global beforeResolve guards.</li>
+<li>Navigation confirmed.</li>
+<li>Call global afterEach hooks.</li>
+<li>DOM updates triggered.</li>
+<li>Call callbacks passed to next in beforeRouteEnter guards with instantiated instances.</li>
+</ul>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by tayu_tayu</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2019-01-25T09:00:00Z">January 25, 2019</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Vue%e3%81%aeNavigation%20Guards&url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-01-19-vue-navigation-guards%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-01-19-vue-navigation-guards%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-01-19-vue-navigation-guards%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	JavaScript, Vue.js
+            	</span>
+            
+        </section>
+                        
+    </footer>
+</article>
+	</div>
+</main>
+<footer id="site-footer">
+  <div class="container">
+    
+    <a href="https://www.twitter.com/tayu_tayu" title="Twitter" target="_blank"><span class="tooltip"><i class="fa fa-twitter"></i></span></a>
+    
+    
+    <a href="https://Navarathri.github.io/blog/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+    <section>&copy; <a href="https://twitter.com/tayu_tayu" title="Twitter@tayu_tayu" target="_blank"><span class="tooltip"></span>tayu_tayu</span></a> 2020 | All rights reserved</section>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://Navarathri.github.io/blog/js/fittext.js"></script>
+<script type="text/javascript">
+  $(".heading").fitText();
+</script>
+
+
+
+
+</body>
+</html>

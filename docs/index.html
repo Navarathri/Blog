@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
 
 <head>
-            <meta charset="utf-8">
+          <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="tayu_tayu">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
@@ -28,13 +28,29 @@
         <meta property="og:type" content="website" />
     
         <meta name="generator" content="Hugo 0.75.1" />
-    <title>たくあんは食べ物。 &middot; たくあんは食べ物。</title>
-    <link rel="canonical" href="https://Navarathri.github.io/blog/" />
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="https://Navarathri.github.io/blog/index.xml">
-    <link rel="stylesheet" type="text/css" href="https://Navarathri.github.io/blog/css/main.css" />
-    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700" rel="stylesheet" type="text/css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <title>たくあんは食べ物。 &middot; たくあんは食べ物。</title>
+  <link rel="canonical" href="https://Navarathri.github.io/blog" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS"
+    href="https://Navarathri.github.io/blog/index.xml"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://Navarathri.github.io/blog/css/main.css"
+  />
+  <link
+    href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    rel="stylesheet"
+  />
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 </head>
 
 <body>
@@ -49,7 +65,125 @@
 <main class="content" role="main">
 	<div class="container">
 	
+		<article class="li posts">
+    <header class="post-header">
+        <h3 class="post-title"><a href="https://Navarathri.github.io/blog/posts/2020-06-06-changes-in-java-string/">Changes to String in java (from 1.7.0_06)</a></h3>
+        <p class="post-time"><time datetime="2020-06-06T09:00:00Z">June 6, 2020</time></p>
+    </header>
+    
+    <section class="post-excerpt">
+        <p>Before 1.7.0_06, String has 4 non static field:
+ char[] value int[] offset int count int hash  Subing.substring create a String by sharing the original String&rsquo;s internal char[] value and setting offset. This saves memory and makes String.substring run in a constant time($O(1)$). Meanwhile, this feature may cause memory leak1.
+http://hg.openjdk.java.net/jdk6/jdk6/jdk/file/8deef18bb749/src/share/classes/java/lang/String.java
+public final class String implements java.io.Serializable, Comparable&lt;String&gt;, CharSequence { /** The value is used for character storage. */ private final char value[]; /** The offset is the first index of the storage that is used.</p>
+    </section>
+
+    <footer class="post-footer">
+        <span>
+            
+            
+            	&nbsp;&nbsp;<i class="fa fa-tag"></i>
+            	Algorithms
+            
+        </span>
+    </footer>
+</article>
 	
+		<article class="li posts">
+    <header class="post-header">
+        <h3 class="post-title"><a href="https://Navarathri.github.io/blog/posts/2020-05-01-algorithms-graphs/">Algorithms - Graphs</a></h3>
+        <p class="post-time"><time datetime="2020-05-01T09:00:00Z">May 1, 2020</time></p>
+    </header>
+    
+    <section class="post-excerpt">
+        <p>Undirected Graphs Some problems  Path Shortest path Cycle Ehler tour: A cycle that uses each edge excatly once. Hamilton tour: A cycle that uses each vertex exactly once  classical NP-complete problem.   Connectivity MST: Biconnectivity: A vertex whose removal disconnects the graph Planarity Graph isomorphism: Are two graphs identical?  No one knows so far. A lonstanding open problem    Representations Real-world graphs tend to be sparse (huge number of vertices, small average vertex degree).</p>
+    </section>
+
+    <footer class="post-footer">
+        <span>
+            
+            
+            	&nbsp;&nbsp;<i class="fa fa-tag"></i>
+            	Algorithms
+            
+        </span>
+    </footer>
+</article>
+	
+		<article class="li posts">
+    <header class="post-header">
+        <h3 class="post-title"><a href="https://Navarathri.github.io/blog/posts/2020-04-29-subtyping/">Programming Language - Subtyping</a></h3>
+        <p class="post-time"><time datetime="2020-04-29T09:00:00Z">April 29, 2020</time></p>
+    </header>
+    
+    <section class="post-excerpt">
+        <p>Some Good Subtyping Rules  Width subtyping: A supertype can have a subset of fields with the same types, i.e., a subtype can have extra fields. Permutation subtypings: A supertype can have the same set of fields with the same types in a different order. Transitivity: if t1 is subtype of t2, and t2 is subtype of t3, then t1 is subtype of t3. Reflexivity: Every type is a subtype of itself.</p>
+    </section>
+
+    <footer class="post-footer">
+        <span>
+            
+            
+            	&nbsp;&nbsp;<i class="fa fa-tag"></i>
+            	programming language
+            
+        </span>
+    </footer>
+</article>
+	
+		<article class="li posts">
+    <header class="post-header">
+        <h3 class="post-title"><a href="https://Navarathri.github.io/blog/posts/2020-02-29-racket/">Racket notes</a></h3>
+        <p class="post-time"><time datetime="2020-02-29T09:00:00Z">February 29, 2020</time></p>
+    </header>
+    
+    <section class="post-excerpt">
+        <p>Basic #lang racket (provide (all-defined-out)) ;this is a comment (define s &#34;hello&#34;) (define x 3) (define y (+ x 2)) (define cube1 (lambda (x) (* x (* x x)))) (define cube2 (lambda (x) (* x x x))) (define (cube3 x) (* x x x)) (define (pow1 x y) (if (=y 0) 1 (* x (pow1 x (- y 1))))) ; currying (define pow2 (lambda (x) (lambda (y) (pow1 x y)))) List  Empty list: null  () doesn&quot;t work for null but '() does   build a list: (list e1 .</p>
+    </section>
+
+    <footer class="post-footer">
+        <span>
+            
+            
+            	&nbsp;&nbsp;<i class="fa fa-tag"></i>
+            	racket
+            
+        </span>
+    </footer>
+</article>
+	
+		<article class="li posts">
+    <header class="post-header">
+        <h3 class="post-title"><a href="https://Navarathri.github.io/blog/posts/2019-12-30-standardml-notes/">Standard ML notes</a></h3>
+        <p class="post-time"><time datetime="2019-12-30T09:00:00Z">December 30, 2019</time></p>
+    </header>
+    
+    <section class="post-excerpt">
+        <p>Basics Comments (* SML comment *) Variable bindings and Expressions val x = 34; (* static environment: x : int *) (* dynamic environment: x --&gt; 34 *) val y = x + 1; (* Use tilde character instead of minus to reprsent negation *) val z = ~1; (* Integer Division *) val w = y div x Strings: (* `\n`のようなエ</p>
+    </section>
+
+    <footer class="post-footer">
+        <span>
+            
+            
+            	&nbsp;&nbsp;<i class="fa fa-tag"></i>
+            	SML
+            
+        </span>
+    </footer>
+</article>
+	
+	
+<nav role="pagination" class="pagination">
+  
+	<span class="post-list-pagination-item post-list-pagination-item-current">Page 1 of 5</span>
+
+  <a href="/blog/page/2/" class="older-posts">
+    &nbsp;Older&nbsp;<i class="fa fa-angle-double-right"></i>
+  </a>
+
+</nav>
+
 	</div>
 </main>
 <footer id="site-footer">
@@ -58,15 +192,16 @@
     <a href="https://www.twitter.com/tayu_tayu" title="Twitter" target="_blank"><span class="tooltip"><i class="fa fa-twitter"></i></span></a>
     
     
-    <a href="https://Navarathri.github.io/blogindex.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+    <a href="https://Navarathri.github.io/blog/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
     <section>&copy; <a href="https://twitter.com/tayu_tayu" title="Twitter@tayu_tayu" target="_blank"><span class="tooltip"></span>tayu_tayu</span></a> 2020 | All rights reserved</section>
   </div>
 </footer>
 
-<script type="text/javascript" src="https://Navarathri.github.io/blogjs/fittext.js"></script>
+<script type="text/javascript" src="https://Navarathri.github.io/blog/js/fittext.js"></script>
 <script type="text/javascript">
   $(".heading").fitText();
 </script>
+
 
 
 </body>

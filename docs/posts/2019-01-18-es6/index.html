@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="tayu_tayu">
+  
+	
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:creator" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:domain" content="https://Navarathri.github.io/blog">
+	
+        <meta property="og:site_name" content="たくあんは食べ物。">
+        <meta property="og:title" content="たくあんは食べ物。">
+        <meta property="og:url" content="https://Navarathri.github.io/blog/posts/2019-01-18-es6/">
+        <meta property="og:description" content="tayu_tayu">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="tayu_tayu" />
+        <meta property="og:article:published_time" content="2019-01-18T16:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.75.1" />
+  <title>ES6について &middot; たくあんは食べ物。</title>
+  <link rel="canonical" href="https://Navarathri.github.io/blog" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS"
+    href=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://Navarathri.github.io/blog/css/main.css"
+  />
+  <link
+    href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    rel="stylesheet"
+  />
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="https://Navarathri.github.io/blog" alt="たくあんは食べ物。"><h1 class="blog-title heading">たくあんは食べ物。</h1></a>
+            <p class="blog-description">tayu_tayu</p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="posts">
+	<header class="post-header">
+        <h3 class="p-post-title">ES6について</h3>
+    </header>
+
+    <section class="post-content">
+        <h2 id="overview">Overview</h2>
+<p><a href="https://github.com/lukehoban/es6features#readme">https://github.com/lukehoban/es6features#readme</a></p>
+<p><a href="http://help.wtf/es6">http://help.wtf/es6</a></p>
+<p><a href="http://es6-features.org">http://es6-features.org</a></p>
+<h2 id="string">String</h2>
+<h3 id="stringx-is-deprecated-use-stringprototypex-instead">String.x is deprecated; use String.prototype.x instead.</h3>
+<p>非推奨の構文:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">var</span> num <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">15</span>; 
+<span style="color:#8be9fd;font-style:italic">String</span>.replace(num, <span style="color:#f1fa8c">/5/</span>, <span style="color:#f1fa8c">&#39;2&#39;</span>);
+</code></pre></div><p>標準の構文:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">var</span> num <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">15</span>;
+<span style="color:#8be9fd;font-style:italic">String</span>(num).replace(<span style="color:#f1fa8c">/5/</span>, <span style="color:#f1fa8c">&#39;2&#39;</span>);
+</code></pre></div><h3 id="template-literal">Template literal</h3>
+<p>Nesting templates:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#ff79c6">const</span> classes <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">`header </span><span style="color:#f1fa8c">${</span> isLargeScreen() <span style="color:#ff79c6">?</span> <span style="color:#f1fa8c">&#39;&#39;</span> <span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">`icon-</span><span style="color:#f1fa8c">${</span>item.isCollapsed <span style="color:#ff79c6">?</span> <span style="color:#f1fa8c">&#39;expander&#39;</span> <span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;collapser&#39;</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span> <span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>;
+</code></pre></div><p>タグ付けされたtemplate</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">var</span> a <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span>;
+<span style="color:#8be9fd;font-style:italic">var</span> b <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">10</span>;
+
+<span style="color:#8be9fd;font-style:italic">function</span> tag(strings, ...values) {
+  console.log(strings[<span style="color:#bd93f9">0</span>]); <span style="color:#6272a4">// &#34;Hello &#34;
+</span><span style="color:#6272a4"></span>  console.log(strings[<span style="color:#bd93f9">1</span>]); <span style="color:#6272a4">// &#34; world&#34;
+</span><span style="color:#6272a4"></span>  console.log(values[<span style="color:#bd93f9">0</span>]);  <span style="color:#6272a4">// 15
+</span><span style="color:#6272a4"></span>  console.log(values[<span style="color:#bd93f9">1</span>]);  <span style="color:#6272a4">// 50
+</span><span style="color:#6272a4"></span>
+  <span style="color:#ff79c6">return</span> <span style="color:#f1fa8c">&#34;Bazinga!&#34;</span>;
+}
+
+tag<span style="color:#f1fa8c">`Hello </span><span style="color:#f1fa8c">${</span> a <span style="color:#ff79c6">+</span> b <span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> world </span><span style="color:#f1fa8c">${</span> a <span style="color:#ff79c6">*</span> b<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>;
+<span style="color:#6272a4">// &#34;Bazinga!&#34;
+</span></code></pre></div><p><a href="http://help.wtf/es6#template_literals">http://help.wtf/es6#template_literals</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6272a4">// Backticks enclose a template literal; ${} interpolates arbitrary expressions
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">let</span> num <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">99</span>; <span style="color:#6272a4">// see block scope
+</span><span style="color:#6272a4"></span>console.log(<span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">${</span>num<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> bottles of beer on the wall, </span><span style="color:#f1fa8c">${</span>num<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> bottles of beer
+</span><span style="color:#f1fa8c">Take one down and pass it around, </span><span style="color:#f1fa8c">${</span><span style="color:#ff79c6">--</span>num<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> bottles of beer!`</span>);
+
+<span style="color:#6272a4">// Tagged form: Attach a function that processes string fragments and evaluated
+</span><span style="color:#6272a4">// expressions
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">function</span> celsius(strings, ...values) {
+  <span style="color:#8be9fd;font-style:italic">let</span> rv <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;&#39;</span>;
+  strings.forEach((string, index) =&gt; { <span style="color:#6272a4">// See arrow functions
+</span><span style="color:#6272a4"></span>    rv <span style="color:#ff79c6">+=</span> string;
+    <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">typeof</span> values[index] <span style="color:#ff79c6">!==</span> <span style="color:#f1fa8c">&#39;undefined&#39;</span>)
+      rv <span style="color:#ff79c6">+=</span> <span style="color:#8be9fd;font-style:italic">Math</span>.round((values[index] <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">32</span>) <span style="color:#ff79c6">/</span> <span style="color:#bd93f9">1.8</span>);
+  });
+  <span style="color:#ff79c6">return</span> rv;
+}
+
+<span style="color:#6272a4">// Converts all the interpolated numbers to the proper unit
+</span><span style="color:#6272a4"></span>console.log(celsius <span style="color:#f1fa8c">`Today temperatures ranged from </span><span style="color:#f1fa8c">${</span><span style="color:#bd93f9">60</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> to </span><span style="color:#f1fa8c">${</span><span style="color:#bd93f9">65</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c"> degrees.`</span>);
+</code></pre></div><h2 id="var-and-let">var and let</h2>
+<p><a href="https://eslint.org/docs/rules/no-var">https://eslint.org/docs/rules/no-var</a></p>
+<blockquote>
+<p>ECMAScript 6 allows programmers to create variables with block scope instead of function scope using the let and const keywords. Block scope is common in many other programming languages and helps programmers avoid mistakes.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">true</span>) {
+    <span style="color:#8be9fd;font-style:italic">var</span> i <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>;
+    <span style="color:#8be9fd;font-style:italic">let</span> j <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">2</span>;
+}
+
+console.log(i) <span style="color:#6272a4">// 1
+</span><span style="color:#6272a4"></span>console.log(j) <span style="color:#6272a4">// ReferenceError: not defined
+</span></code></pre></div><h2 id="default-function-parameters">Default function parameters</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">function</span> multiply(a, b <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>) {
+  <span style="color:#ff79c6">return</span> a <span style="color:#ff79c6">*</span> b;
+}
+</code></pre></div><h2 id="iterators-and-forof">Iterators and for&hellip;of</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">let</span> fibonacci <span style="color:#ff79c6">=</span> {
+  [Symbol.iterator]() {
+    <span style="color:#8be9fd;font-style:italic">let</span> pre <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>, cur <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>;
+    <span style="color:#ff79c6">return</span> {
+      next() {
+        [pre, cur] <span style="color:#ff79c6">=</span> [cur, pre <span style="color:#ff79c6">+</span> cur];
+        <span style="color:#ff79c6">return</span> { done<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>, value<span style="color:#ff79c6">:</span> cur }
+      }
+    }
+  }
+}
+
+<span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">var</span> n <span style="color:#ff79c6">of</span> fibonacci) {
+  <span style="color:#6272a4">// truncate the sequence at 1000
+</span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">if</span> (n <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">1000</span>)
+    <span style="color:#ff79c6">break</span>;
+  console.log(n);
+}
+</code></pre></div><p>More: <a href="https://en.wikipedia.org/wiki/Duck_typing">Duck Typing</a></p>
+<h2 id="modules">Modules</h2>
+<h3 id="import-and-export">import and export</h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export</a></p>
+<h3 id="module-loaders">Module Loaders</h3>
+<p>Module loaders support:</p>
+<ul>
+<li>Dynamic loading</li>
+<li>State isolation</li>
+<li>Global namespace isolation</li>
+<li>Compilation hooks</li>
+<li>Nested virtualization</li>
+</ul>
+<p>The default module loader can be configured, and new loaders can be constructed to evaluate and load code in isolated or constrained contexts.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6272a4">// Dynamic loading – ‘System’ is default loader
+</span><span style="color:#6272a4"></span>System.<span style="color:#ff79c6">import</span>(<span style="color:#f1fa8c">&#39;lib/math&#39;</span>).then(<span style="color:#8be9fd;font-style:italic">function</span>(m) {
+  alert(<span style="color:#f1fa8c">&#34;2π = &#34;</span> <span style="color:#ff79c6">+</span> m.sum(m.pi, m.pi));
+});
+
+<span style="color:#6272a4">// Create execution sandboxes – new Loaders
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> loader <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Loader({
+  global<span style="color:#ff79c6">:</span> fixup(<span style="color:#8be9fd;font-style:italic">window</span>) <span style="color:#6272a4">// replace ‘console.log’
+</span><span style="color:#6272a4"></span>});
+loader.<span style="color:#8be9fd;font-style:italic">eval</span>(<span style="color:#f1fa8c">&#34;console.log(&#39;hello world!&#39;);&#34;</span>);
+
+<span style="color:#6272a4">// Directly manipulate module cache
+</span><span style="color:#6272a4"></span>System.get(<span style="color:#f1fa8c">&#39;jquery&#39;</span>);
+System.set(<span style="color:#f1fa8c">&#39;jquery&#39;</span>, Module({$<span style="color:#ff79c6">:</span> $})); <span style="color:#6272a4">// WARNING: not yet finalized
+</span></code></pre></div><h2 id="promises">Promises</h2>
+<p><a href="https://github.com/azu/promises-book">JavaScript Promiseの本</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">function</span> asyncFunction() {
+    
+    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">new</span> <span style="color:#8be9fd;font-style:italic">Promise</span>(<span style="color:#8be9fd;font-style:italic">function</span> (resolve, reject) {
+        setTimeout(<span style="color:#8be9fd;font-style:italic">function</span> () {
+            resolve(<span style="color:#f1fa8c">&#39;Async Hello world&#39;</span>);
+        }, <span style="color:#bd93f9">16</span>);
+    });
+}
+
+asyncFunction().then(<span style="color:#8be9fd;font-style:italic">function</span> (value) {
+    console.log(value);    <span style="color:#6272a4">// =&gt; &#39;Async Hello world&#39;
+</span><span style="color:#6272a4"></span>}).<span style="color:#ff79c6">catch</span>(<span style="color:#8be9fd;font-style:italic">function</span> (error) {
+    console.error(error);
+});
+</code></pre></div><h2 id="generators">Generators</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6272a4">// A generator function will return an object that implements the iteration
+</span><span style="color:#6272a4">// protocol, i.e., it has a next() method that returns
+</span><span style="color:#6272a4">// { value: &lt; some value&gt;, done: &lt;true or false&gt; }
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">function</span><span style="color:#ff79c6">*</span> incRand(max) { <span style="color:#6272a4">// Asterisk defines this as a generator function
+</span><span style="color:#6272a4"></span>  <span style="color:#ff79c6">while</span> (<span style="color:#ff79c6">true</span>) {
+    <span style="color:#6272a4">// Pause execution after the yield, resume when next(&lt;something&gt;) is called
+</span><span style="color:#6272a4"></span>    <span style="color:#6272a4">// and assign &lt;something&gt; to x
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">let</span> x <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">yield</span> <span style="color:#8be9fd;font-style:italic">Math</span>.floor(<span style="color:#8be9fd;font-style:italic">Math</span>.random() <span style="color:#ff79c6">*</span> max <span style="color:#ff79c6">+</span> <span style="color:#bd93f9">1</span>);
+    max <span style="color:#ff79c6">+=</span> x;
+  }
+}
+<span style="color:#8be9fd;font-style:italic">var</span> rng <span style="color:#ff79c6">=</span> incRand(<span style="color:#bd93f9">2</span>); <span style="color:#6272a4">// Now we have a generator object to work with
+</span><span style="color:#6272a4"></span>console.log(rng.next()); <span style="color:#6272a4">// { value: &lt;between 1 and 2&gt;, done: false }
+</span><span style="color:#6272a4"></span>console.log(rng.next(<span style="color:#bd93f9">3</span>)); <span style="color:#6272a4">// as above, but between 1 and 5
+</span><span style="color:#6272a4"></span>console.log(rng.next()); <span style="color:#6272a4">// as above, but NaN since 5 + undefined results in NaN
+</span><span style="color:#6272a4"></span>console.log(rng.next(<span style="color:#bd93f9">20</span>)); <span style="color:#6272a4">// Oops, looks like we broke it! NaN again.
+</span><span style="color:#6272a4"></span>rng.<span style="color:#ff79c6">throw</span>(<span style="color:#ff79c6">new</span> <span style="color:#8be9fd;font-style:italic">Error</span>(<span style="color:#f1fa8c">&#39;Unrecoverable generator state.&#39;</span>)); <span style="color:#6272a4">// Will be thrown from yield
+</span></code></pre></div><h2 id="shorthand-of-object-initializer">shorthand of Object initializer</h2>
+<p><a href="https://ariya.io/2013/02/es6-and-object-literal-property-value-shorthand">https://ariya.io/2013/02/es6-and-object-literal-property-value-shorthand</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6272a4">// Shorthand property names (ES2015)
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> a <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;foo&#39;</span>, b <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">42</span>, c <span style="color:#ff79c6">=</span> {};
+<span style="color:#8be9fd;font-style:italic">var</span> o <span style="color:#ff79c6">=</span> {a, b, c};
+
+<span style="color:#6272a4">// Shorthand method names (ES2015)
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> o <span style="color:#ff79c6">=</span> {
+  property(parameters) {}
+};
+
+<span style="color:#6272a4">// Computed property names (ES2015)
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> prop <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;foo&#39;</span>;
+<span style="color:#8be9fd;font-style:italic">var</span> o <span style="color:#ff79c6">=</span> {
+  [prop]<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;hey&#39;</span>,
+  [<span style="color:#f1fa8c">&#39;b&#39;</span> <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;ar&#39;</span>]<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;there&#39;</span>
+};
+</code></pre></div><p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment</a></p>
+<h2 id="destructuring">Destructuring</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment</a></p>
+<p>The destructuring assignment syntax is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. Destructuring is <strong>fail-soft</strong>, similar to standard object lookup foo[&ldquo;bar&rdquo;], producing undefined values when not found.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">let</span> [n1, n2, n3, n4, ...r] <span style="color:#ff79c6">=</span> [<span style="color:#bd93f9">100</span>, <span style="color:#f1fa8c">&#39;three&#39;</span>, <span style="color:#bd93f9">34</span>, {number<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">23</span>}, <span style="color:#bd93f9">694</span>, <span style="color:#f1fa8c">&#39;eighteen&#39;</span>];
+console.log(n1, n2, n3, n4); <span style="color:#6272a4">// &#34;100 &#39;three&#39; 34 { number: 23 }&#34;
+</span><span style="color:#6272a4"></span>console.log(r); <span style="color:#6272a4">// &#34;[ 694, &#39;eighteen&#39; ]&#34;
+</span></code></pre></div><p>Two variables values can be swapped in one destructuring expression</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">var</span> a <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>;
+<span style="color:#8be9fd;font-style:italic">var</span> b <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">3</span>;
+
+[a, b] <span style="color:#ff79c6">=</span> [b, a];
+console.log(a); <span style="color:#6272a4">// 3
+</span><span style="color:#6272a4"></span>console.log(b); <span style="color:#6272a4">// 1
+</span></code></pre></div><p>Object Destructuring</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">var</span> o <span style="color:#ff79c6">=</span> {p<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">42</span>, q<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">true</span>};
+<span style="color:#8be9fd;font-style:italic">var</span> {p, q} <span style="color:#ff79c6">=</span> o;
+
+console.log(p); <span style="color:#6272a4">// 42
+</span><span style="color:#6272a4"></span>console.log(q); <span style="color:#6272a4">// true
+</span></code></pre></div><p>Works for function parameters</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">var</span> fmt <span style="color:#ff79c6">=</span> ({id <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>, name}) =&gt; <span style="color:#f1fa8c">`</span><span style="color:#f1fa8c">${</span>id<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">: </span><span style="color:#f1fa8c">${</span>name<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">`</span>;
+console.log(fmt({ id<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">1</span>, name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;joe&#39;</span>}));
+</code></pre></div><h2 id="symbol">symbol</h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Glossary/Symbol">https://developer.mozilla.org/en-US/docs/Glossary/Symbol</a></p>
+<p><code>sympol</code> is a primitive data type. The Symbol() function returns a value of type symbol and every returned value is unique. It <strong>does not</strong> support <code>new Symbol()</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">var</span> sym1 <span style="color:#ff79c6">=</span> Symbol();
+<span style="color:#8be9fd;font-style:italic">var</span> sym2 <span style="color:#ff79c6">=</span> Symbol(<span style="color:#f1fa8c">&#39;foo&#39;</span>);
+<span style="color:#8be9fd;font-style:italic">var</span> sym3 <span style="color:#ff79c6">=</span> Symbol(<span style="color:#f1fa8c">&#39;foo&#39;</span>);
+
+Symbol(<span style="color:#f1fa8c">&#39;foo&#39;</span>) <span style="color:#ff79c6">===</span> Symbol(<span style="color:#f1fa8c">&#39;foo&#39;</span>); <span style="color:#6272a4">// false
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> sym <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Symbol(); <span style="color:#6272a4">// TypeError
+</span></code></pre></div><h2 id="map--set--weakmap--weakset">Map + Set + WeakMap + WeakSet</h2>
+<p>Reference: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#Why_WeakMap">Why WeakMap?</a></p>
+<blockquote>
+<p>Native WeakMaps hold &ldquo;weak&rdquo; references to key objects, which means that they do not prevent garbage collection in case there would be no other reference to the key object.  This also avoids preventing garbage collection of values in the map.</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript">/ Sets
+<span style="color:#8be9fd;font-style:italic">var</span> s <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Set();
+s.add(<span style="color:#f1fa8c">&#34;hello&#34;</span>).add(<span style="color:#f1fa8c">&#34;goodbye&#34;</span>).add(<span style="color:#f1fa8c">&#34;hello&#34;</span>);
+s.size <span style="color:#ff79c6">===</span> <span style="color:#bd93f9">2</span>;
+s.has(<span style="color:#f1fa8c">&#34;hello&#34;</span>) <span style="color:#ff79c6">===</span> <span style="color:#ff79c6">true</span>;
+
+<span style="color:#6272a4">// Maps
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> m <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Map();
+m.set(<span style="color:#f1fa8c">&#34;hello&#34;</span>, <span style="color:#bd93f9">42</span>);
+m.set(s, <span style="color:#bd93f9">34</span>);
+m.get(s) <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">34</span>;
+
+<span style="color:#6272a4">// Weak Maps
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> wm <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> WeakMap();
+wm.set(s, { extra<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">42</span> });
+wm.size <span style="color:#ff79c6">===</span> <span style="color:#ff79c6">undefined</span>
+
+<span style="color:#6272a4">// Weak Sets
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> ws <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> WeakSet();
+ws.add({ data<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">42</span> });
+<span style="color:#6272a4">// Because the added object has no other references, it will not be held in the set
+</span></code></pre></div><h2 id="new-apis-in-core-libraries">New APIs in core libraries</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#6272a4">// Number
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">Number</span>.EPSILON
+<span style="color:#8be9fd;font-style:italic">Number</span>.isInteger(<span style="color:#ff79c6">Infinity</span>) <span style="color:#6272a4">// false
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">Number</span>.<span style="color:#8be9fd;font-style:italic">isNaN</span>(<span style="color:#f1fa8c">&#34;NaN&#34;</span>) <span style="color:#6272a4">// false
+</span><span style="color:#6272a4"></span>
+<span style="color:#6272a4">// Math
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">Math</span>.acosh(<span style="color:#bd93f9">3</span>) <span style="color:#6272a4">// 1.762747174039086
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">Math</span>.hypot(<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>) <span style="color:#6272a4">// 5
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">Math</span>.imul(<span style="color:#8be9fd;font-style:italic">Math</span>.pow(<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">32</span>) <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>, <span style="color:#8be9fd;font-style:italic">Math</span>.pow(<span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">32</span>) <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">2</span>) <span style="color:#6272a4">// 2
+</span><span style="color:#6272a4"></span>
+<span style="color:#6272a4">// String
+</span><span style="color:#6272a4"></span><span style="color:#f1fa8c">&#34;abcde&#34;</span>.includes(<span style="color:#f1fa8c">&#34;cd&#34;</span>) <span style="color:#6272a4">// true
+</span><span style="color:#6272a4"></span><span style="color:#f1fa8c">&#34;abc&#34;</span>.repeat(<span style="color:#bd93f9">3</span>) <span style="color:#6272a4">// &#34;abcabcabc&#34;
+</span><span style="color:#6272a4"></span>
+<span style="color:#6272a4">// Array
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">Array</span>.from(<span style="color:#8be9fd;font-style:italic">document</span>.querySelectorAll(<span style="color:#f1fa8c">&#39;*&#39;</span>)) <span style="color:#6272a4">// Returns a real Array
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">Array</span>.<span style="color:#ff79c6">of</span>(<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>) <span style="color:#6272a4">// Similar to new Array(...), but without special one-arg behavior
+</span><span style="color:#6272a4"></span>[<span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>, <span style="color:#bd93f9">0</span>].fill(<span style="color:#bd93f9">7</span>, <span style="color:#bd93f9">1</span>) <span style="color:#6272a4">// [0,7,7]
+</span><span style="color:#6272a4"></span>[<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>].find(x =&gt; x <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">3</span>) <span style="color:#6272a4">// 3
+</span><span style="color:#6272a4"></span>[<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>].findIndex(x =&gt; x <span style="color:#ff79c6">==</span> <span style="color:#bd93f9">2</span>) <span style="color:#6272a4">// 1
+</span><span style="color:#6272a4"></span>[<span style="color:#bd93f9">1</span>, <span style="color:#bd93f9">2</span>, <span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">4</span>, <span style="color:#bd93f9">5</span>].copyWithin(<span style="color:#bd93f9">3</span>, <span style="color:#bd93f9">0</span>) <span style="color:#6272a4">// [1, 2, 3, 1, 2]
+</span><span style="color:#6272a4"></span>[<span style="color:#f1fa8c">&#34;a&#34;</span>, <span style="color:#f1fa8c">&#34;b&#34;</span>, <span style="color:#f1fa8c">&#34;c&#34;</span>].entries() <span style="color:#6272a4">// iterator [0, &#34;a&#34;], [1,&#34;b&#34;], [2,&#34;c&#34;]
+</span><span style="color:#6272a4"></span>[<span style="color:#f1fa8c">&#34;a&#34;</span>, <span style="color:#f1fa8c">&#34;b&#34;</span>, <span style="color:#f1fa8c">&#34;c&#34;</span>].keys() <span style="color:#6272a4">// iterator 0, 1, 2
+</span><span style="color:#6272a4"></span>[<span style="color:#f1fa8c">&#34;a&#34;</span>, <span style="color:#f1fa8c">&#34;b&#34;</span>, <span style="color:#f1fa8c">&#34;c&#34;</span>].values() <span style="color:#6272a4">// iterator &#34;a&#34;, &#34;b&#34;, &#34;c&#34;
+</span><span style="color:#6272a4"></span>
+<span style="color:#6272a4">// Object
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">Object</span>.assign(Point, { origin<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">new</span> Point(<span style="color:#bd93f9">0</span>,<span style="color:#bd93f9">0</span>) })
+</code></pre></div><h2 id="proxies">Proxies</h2>
+<p>The Proxy object is used to define custom behavior for fundamental operations (e.g. property lookup, assignment, enumeration, function invocation, etc).</p>
+<p>See more examples at <a href="%5Bhttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy%5D(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)">MDN Proxy doc</a></p>
+<p><strong>No-op forwarding proxy</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">var</span> target <span style="color:#ff79c6">=</span> {};
+<span style="color:#8be9fd;font-style:italic">var</span> p <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> <span style="color:#8be9fd;font-style:italic">Proxy</span>(target, {});
+
+p.a <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">37</span>; <span style="color:#6272a4">// operation forwarded to the target
+</span><span style="color:#6272a4"></span>
+console.log(target.a); <span style="color:#6272a4">// 37. The operation has been properly forwarded
+</span></code></pre></div><p><strong>Validation</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">let</span> validator <span style="color:#ff79c6">=</span> {
+  set<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">function</span>(obj, prop, value) {
+    <span style="color:#ff79c6">if</span> (prop <span style="color:#ff79c6">===</span> <span style="color:#f1fa8c">&#39;age&#39;</span>) {
+      <span style="color:#ff79c6">if</span> (<span style="color:#ff79c6">!</span><span style="color:#8be9fd;font-style:italic">Number</span>.isInteger(value)) {
+        <span style="color:#ff79c6">throw</span> <span style="color:#ff79c6">new</span> TypeError(<span style="color:#f1fa8c">&#39;The age is not an integer&#39;</span>);
+      }
+      <span style="color:#ff79c6">if</span> (value <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">200</span>) {
+        <span style="color:#ff79c6">throw</span> <span style="color:#ff79c6">new</span> RangeError(<span style="color:#f1fa8c">&#39;The age seems invalid&#39;</span>);
+      }
+    }
+
+    <span style="color:#6272a4">// The default behavior to store the value
+</span><span style="color:#6272a4"></span>    obj[prop] <span style="color:#ff79c6">=</span> value;
+
+    <span style="color:#6272a4">// Indicate success
+</span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">true</span>;
+  }
+};
+
+<span style="color:#8be9fd;font-style:italic">let</span> person <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> <span style="color:#8be9fd;font-style:italic">Proxy</span>({}, validator);
+
+person.age <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">100</span>;
+console.log(person.age); <span style="color:#6272a4">// 100
+</span><span style="color:#6272a4"></span>person.age <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;young&#39;</span>; <span style="color:#6272a4">// Throws an exception
+</span><span style="color:#6272a4"></span>person.age <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">300</span>; <span style="color:#6272a4">// Throws an exception
+</span></code></pre></div><h2 id="binary-and-octal-literals">Binary and Octal Literals</h2>
+<pre><code>0b111110111 === 503 // true
+0o767 === 503 // true
+</code></pre><h2 id="その他">その他</h2>
+<h3 id="reflect-api">Reflect API</h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect</a></p>
+<h3 id="tail-calls">Tail calls</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Javascript" data-lang="Javascript"><span style="color:#8be9fd;font-style:italic">function</span> factorial(n, acc <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">1</span>) {
+    <span style="color:#f1fa8c">&#39;use strict&#39;</span>;
+    <span style="color:#ff79c6">if</span> (n <span style="color:#ff79c6">&lt;=</span> <span style="color:#bd93f9">1</span>) <span style="color:#ff79c6">return</span> acc;
+    <span style="color:#ff79c6">return</span> factorial(n <span style="color:#ff79c6">-</span> <span style="color:#bd93f9">1</span>, n <span style="color:#ff79c6">*</span> acc);
+}
+
+<span style="color:#6272a4">// Stack overflow in most implementations today,
+</span><span style="color:#6272a4">// but safe on arbitrary inputs in ES6
+</span><span style="color:#6272a4"></span>factorial(<span style="color:#bd93f9">100000</span>)
+</code></pre></div><h3 id="unicode">Unicode</h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode</a></p>
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by tayu_tayu</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2019-01-18T16:00:00Z">January 18, 2019</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=ES6%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6&url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-01-18-es6%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-01-18-es6%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-01-18-es6%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	JavaScript
+            	</span>
+            
+        </section>
+                        
+    </footer>
+</article>
+	</div>
+</main>
+<footer id="site-footer">
+  <div class="container">
+    
+    <a href="https://www.twitter.com/tayu_tayu" title="Twitter" target="_blank"><span class="tooltip"><i class="fa fa-twitter"></i></span></a>
+    
+    
+    <a href="https://Navarathri.github.io/blog/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+    <section>&copy; <a href="https://twitter.com/tayu_tayu" title="Twitter@tayu_tayu" target="_blank"><span class="tooltip"></span>tayu_tayu</span></a> 2020 | All rights reserved</section>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://Navarathri.github.io/blog/js/fittext.js"></script>
+<script type="text/javascript">
+  $(".heading").fitText();
+</script>
+
+
+
+
+</body>
+</html>

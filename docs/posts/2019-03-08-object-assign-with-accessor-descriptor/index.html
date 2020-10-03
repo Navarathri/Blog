@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="tayu_tayu">
+  
+	
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:creator" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:domain" content="https://Navarathri.github.io/blog">
+	
+        <meta property="og:site_name" content="たくあんは食べ物。">
+        <meta property="og:title" content="たくあんは食べ物。">
+        <meta property="og:url" content="https://Navarathri.github.io/blog/posts/2019-03-08-object-assign-with-accessor-descriptor/">
+        <meta property="og:description" content="tayu_tayu">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="tayu_tayu" />
+        <meta property="og:article:published_time" content="2019-03-08T09:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.75.1" />
+  <title>Object.assign() with accessor descriptor &middot; たくあんは食べ物。</title>
+  <link rel="canonical" href="https://Navarathri.github.io/blog" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS"
+    href=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://Navarathri.github.io/blog/css/main.css"
+  />
+  <link
+    href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    rel="stylesheet"
+  />
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="https://Navarathri.github.io/blog" alt="たくあんは食べ物。"><h1 class="blog-title heading">たくあんは食べ物。</h1></a>
+            <p class="blog-description">tayu_tayu</p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="posts">
+	<header class="post-header">
+        <h3 class="p-post-title">Object.assign() with accessor descriptor</h3>
+    </header>
+
+    <section class="post-content">
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign#Copying_accessors">MDN docs:</a></p>
+<blockquote>
+<p>The Object.assign() method only copies enumerable and own properties from a source object to a target object. It uses [[Get]] on the source and [[Set]] on the target, so it will invoke getters and setters. Therefore it assigns properties versus just copying or defining new properties. This may make it unsuitable for merging new properties into a prototype if the merge sources contain getters.</p>
+</blockquote>
+<p>For example</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#ff79c6">class</span> Cat {
+    constructor(name) {
+        <span style="color:#ff79c6">this</span>._name <span style="color:#ff79c6">=</span> name;
+    }
+
+    get name() {
+        <span style="color:#ff79c6">return</span> <span style="color:#ff79c6">this</span>._name;
+    }
+    set name(value) {
+        <span style="color:#ff79c6">this</span>._name <span style="color:#ff79c6">=</span> value;
+    }
+}
+
+<span style="color:#8be9fd;font-style:italic">let</span> nyannko <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Cat(<span style="color:#f1fa8c">&#34;nyannko&#34;</span>);
+<span style="color:#8be9fd;font-style:italic">let</span> copy <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Object</span>.assign({}, nyannko)
+
+console.log(nyannko.name) <span style="color:#6272a4">// nyannko
+</span><span style="color:#6272a4"></span>console.log(copy.name) <span style="color:#6272a4">// undefined
+</span></code></pre></div><p>The <code>name</code> property is lost.</p>
+<p>To copy accessors, we can use <code>Object.getOwnPropertyDescriptor()</code> and <code>Object.defineProperty()</code> as the MDN docs recommend:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8be9fd;font-style:italic">var</span> obj <span style="color:#ff79c6">=</span> {
+  foo<span style="color:#ff79c6">:</span> <span style="color:#bd93f9">1</span>,
+  get bar() {
+    <span style="color:#ff79c6">return</span> <span style="color:#bd93f9">2</span>;
+  }
+};
+
+<span style="color:#8be9fd;font-style:italic">var</span> copy <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Object</span>.assign({}, obj); 
+console.log(copy); 
+<span style="color:#6272a4">// { foo: 1, bar: 2 }, the value of copy.bar is obj.bar&#39;s getter&#39;s return value.
+</span><span style="color:#6272a4"></span>
+<span style="color:#6272a4">// This is an assign function that copies full descriptors
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">function</span> completeAssign(target, ...sources) {
+  sources.forEach(source =&gt; {
+    <span style="color:#8be9fd;font-style:italic">let</span> descriptors <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Object</span>.keys(source).reduce((descriptors, key) =&gt; {
+      descriptors[key] <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Object</span>.getOwnPropertyDescriptor(source, key);
+      <span style="color:#ff79c6">return</span> descriptors;
+    }, {});
+    <span style="color:#6272a4">// by default, Object.assign copies enumerable Symbols too
+</span><span style="color:#6272a4"></span>    <span style="color:#8be9fd;font-style:italic">Object</span>.getOwnPropertySymbols(source).forEach(sym =&gt; {
+      <span style="color:#8be9fd;font-style:italic">let</span> descriptor <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Object</span>.getOwnPropertyDescriptor(source, sym);
+      <span style="color:#ff79c6">if</span> (descriptor.enumerable) {
+        descriptors[sym] <span style="color:#ff79c6">=</span> descriptor;
+      }
+    });
+    <span style="color:#8be9fd;font-style:italic">Object</span>.defineProperties(target, descriptors);
+  });
+  <span style="color:#ff79c6">return</span> target;
+}
+
+<span style="color:#8be9fd;font-style:italic">var</span> copy <span style="color:#ff79c6">=</span> completeAssign({}, obj);
+console.log(copy);
+<span style="color:#6272a4">// { foo:1, get bar() { return 2 } }
+</span></code></pre></div><p>The other way is <code>Object.prototype.__proto__</code> (but <strong>not recommended</strong>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#8be9fd;font-style:italic">let</span> completeCopy <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Object</span>.assign({__proto__<span style="color:#ff79c6">:</span> nyannko.__proto__}, nyannko);
+console.log(completeCopy.name); <span style="color:#6272a4">// nyannko
+</span></code></pre></div><p><code>Object.prototype.__proto__</code> is deprecated so be aware that this may cease to work at any time.
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto</a></p>
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by tayu_tayu</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2019-03-08T09:00:00Z">March 8, 2019</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Object.assign%28%29%20with%20accessor%20descriptor&url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-03-08-object-assign-with-accessor-descriptor%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-03-08-object-assign-with-accessor-descriptor%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-03-08-object-assign-with-accessor-descriptor%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	JavaScript
+            	</span>
+            
+        </section>
+                        
+    </footer>
+</article>
+	</div>
+</main>
+<footer id="site-footer">
+  <div class="container">
+    
+    <a href="https://www.twitter.com/tayu_tayu" title="Twitter" target="_blank"><span class="tooltip"><i class="fa fa-twitter"></i></span></a>
+    
+    
+    <a href="https://Navarathri.github.io/blog/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+    <section>&copy; <a href="https://twitter.com/tayu_tayu" title="Twitter@tayu_tayu" target="_blank"><span class="tooltip"></span>tayu_tayu</span></a> 2020 | All rights reserved</section>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://Navarathri.github.io/blog/js/fittext.js"></script>
+<script type="text/javascript">
+  $(".heading").fitText();
+</script>
+
+
+
+
+</body>
+</html>

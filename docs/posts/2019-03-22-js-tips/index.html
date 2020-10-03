@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="tayu_tayu">
+  
+	
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:creator" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:domain" content="https://Navarathri.github.io/blog">
+	
+        <meta property="og:site_name" content="たくあんは食べ物。">
+        <meta property="og:title" content="たくあんは食べ物。">
+        <meta property="og:url" content="https://Navarathri.github.io/blog/posts/2019-03-22-js-tips/">
+        <meta property="og:description" content="tayu_tayu">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="tayu_tayu" />
+        <meta property="og:article:published_time" content="2019-03-22T09:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.75.1" />
+  <title>Js tips I can&#39;t remember &middot; たくあんは食べ物。</title>
+  <link rel="canonical" href="https://Navarathri.github.io/blog" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS"
+    href=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://Navarathri.github.io/blog/css/main.css"
+  />
+  <link
+    href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    rel="stylesheet"
+  />
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="https://Navarathri.github.io/blog" alt="たくあんは食べ物。"><h1 class="blog-title heading">たくあんは食べ物。</h1></a>
+            <p class="blog-description">tayu_tayu</p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="posts">
+	<header class="post-header">
+        <h3 class="p-post-title">Js tips I can&#39;t remember</h3>
+    </header>
+
+    <section class="post-content">
+        <h2 id="__proto__-vs-prototype"><code>__proto__</code> VS <code>prototype</code></h2>
+<blockquote>
+<p><code>__proto__</code> is the actual object that is used in the lookup chain to resolve methods and others. <code>prototype</code> is the object that is used to build <code>__proto__</code> when creating an object with <code>new</code>.</p>
+</blockquote>
+<blockquote>
+<p>The &ldquo;cool kids&rdquo; in JavaScript would generally pronounce <code>__proto__</code> as &ldquo;<strong>dunder proto</strong>&rdquo;.</p>
+</blockquote>
+<p><a href="https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript">https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript</a></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">( <span style="color:#ff79c6">new</span> Foo ).__proto__ <span style="color:#ff79c6">===</span> Foo.prototype; <span style="color:#6272a4">// true
+</span><span style="color:#6272a4"></span>( <span style="color:#ff79c6">new</span> Foo ).prototype <span style="color:#ff79c6">===</span> <span style="color:#ff79c6">undefined</span>; <span style="color:#6272a4">// true
+</span></code></pre></div><h2 id="-vs-objectcreatenull"><code>{}</code> VS <code>Object.create(null)</code></h2>
+<p><code>Object.create(null)</code> can create a <em>&lsquo;pure&rsquo;</em> empty object that is without the delegation to <code>Object.prototype</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">let</span> obj1 <span style="color:#ff79c6">=</span> {};
+<span style="color:#8be9fd;font-style:italic">let</span> obj2 <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Object</span>.create(<span style="color:#ff79c6">null</span>);
+console.log(obj1.__proto__); <span style="color:#6272a4">// {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+</span><span style="color:#6272a4"></span>console.log(obj2.__proto__); <span style="color:#6272a4">// undefined
+</span></code></pre></div><h2 id="computed-property-names">Computed Property Names</h2>
+<p>ES6 adds computed property names, which is helpful when declaring objects using the object-literal syntax.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">var</span> prefix <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;foo&#34;</span>;
+
+<span style="color:#8be9fd;font-style:italic">var</span> myObject <span style="color:#ff79c6">=</span> {
+	[prefix <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;bar&#34;</span>]<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;hello&#34;</span>,
+	[prefix <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;baz&#34;</span>]<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;world&#34;</span>
+};
+
+myObject[<span style="color:#f1fa8c">&#34;foobar&#34;</span>]; <span style="color:#6272a4">// hello
+</span><span style="color:#6272a4"></span>myObject[<span style="color:#f1fa8c">&#34;foobaz&#34;</span>]; <span style="color:#6272a4">// world
+</span></code></pre></div><h2 id="dangerous-functionprototypename-comparison">Dangerous <code>Function.prototype.name</code> comparison</h2>
+<p>Sometimes we may spectify a function by comparing the function name:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">function</span> Foo() {};
+<span style="color:#8be9fd;font-style:italic">let</span> foo <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Foo();
+
+<span style="color:#ff79c6">if</span> (foo.constructor.name <span style="color:#ff79c6">===</span> <span style="color:#f1fa8c">&#39;Foo&#39;</span>) {
+  console.log(<span style="color:#f1fa8c">&#34;&#39;foo&#39; is an instance of &#39;Foo&#39;&#34;</span>);
+} <span style="color:#ff79c6">else</span> {
+  console.log(<span style="color:#f1fa8c">&#39;Oops!&#39;</span>);
+}
+</code></pre></div><p>It may behave unexpectedly after building because most build tools compress the code to forms like:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">function</span> a() {};
+<span style="color:#8be9fd;font-style:italic">let</span> b <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> a();
+<span style="color:#ff79c6">if</span> (b.constructor.name <span style="color:#ff79c6">===</span> <span style="color:#f1fa8c">&#39;Foo&#39;</span>) {
+  console.log(<span style="color:#f1fa8c">&#34;&#39;foo&#39; is an instance of &#39;Foo&#39;&#34;</span>);
+} <span style="color:#ff79c6">else</span> {
+  console.log(<span style="color:#f1fa8c">&#39;Oops!&#39;</span>);
+}
+</code></pre></div><h2 id="a-more-robust-way-of-performing-object-property-check">A more robust way of performing object property check</h2>
+<p>Normally we use <code>hasOwnProperty()</code> checks to see if object has the property or not. But consider objects created by:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#6272a4">// this will not consult the [[Prototype]] chain
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">let</span> obj <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Object</span>.create(<span style="color:#ff79c6">null</span>)
+</code></pre></div><p>Such object does not link to <code>Object.prototype</code>, thus <code>obj.hasOwnProperty(...)</code> would fail and raise error.</p>
+<p>We can use a more robust way to perform property check:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">Object</span>.prototype.hasOwnProperty.call(obj,<span style="color:#f1fa8c">&#34;a&#34;</span>) <span style="color:#6272a4">//false
+</span></code></pre></div><p>Or:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#6272a4">// this will check the current object or any higher level of the [[Prototype]] chain
+</span><span style="color:#6272a4"></span><span style="color:#f1fa8c">&#34;a&#34;</span> <span style="color:#ff79c6">in</span> obj
+</code></pre></div><h2 id="forin-vs-forof"><code>for...in</code> vs <code>for...of</code></h2>
+<p>The <code>for..in</code> loop iterates over the list of enumerable properties on an object (including its <code>[[Prototype]]</code> chain).The <code>for...of</code> iterate over the values directly instead of the array indices (or object properties). It asks built-in or custom <code>@@iterator</code> of the thing to be iterated.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">let</span> arr <span style="color:#ff79c6">=</span> [<span style="color:#f1fa8c">&#39;a&#39;</span>, <span style="color:#f1fa8c">&#39;b&#39;</span>, <span style="color:#f1fa8c">&#39;c&#39;</span>]
+arr.name <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#39;foo&#39;</span>
+
+arr <span style="color:#6272a4">// [&#34;a&#34;, &#34;b&#34;, &#34;c&#34;, name: &#34;foo&#34;]
+</span><span style="color:#6272a4"></span>
+<span style="color:#ff79c6">for</span> (key <span style="color:#ff79c6">in</span> arr)
+  console.log(key) <span style="color:#6272a4">// 0 1 2 name
+</span><span style="color:#6272a4"></span>
+<span style="color:#ff79c6">for</span> (value <span style="color:#ff79c6">of</span> arr)
+  console.log(value) <span style="color:#6272a4">// a b c
+</span></code></pre></div><h2 id="prototypal-inheritance">&ldquo;(Prototypal) Inheritance&rdquo;</h2>
+<p>When writing &ldquo;prototype style&rdquo; code like implementing Parent-Child class inheritance:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8be9fd;font-style:italic">function</span> Foo(name) {
+	<span style="color:#ff79c6">this</span>.name <span style="color:#ff79c6">=</span> name;
+}
+
+Foo.prototype.myName <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">function</span>() {
+	<span style="color:#ff79c6">return</span> <span style="color:#ff79c6">this</span>.name;
+};
+
+<span style="color:#8be9fd;font-style:italic">function</span> Bar(name,label) {
+	Foo.call( <span style="color:#ff79c6">this</span>, name );
+	<span style="color:#ff79c6">this</span>.label <span style="color:#ff79c6">=</span> label;
+}
+
+<span style="color:#6272a4">// Then trying to build a family with Foo and Bar
+</span><span style="color:#6272a4">// ...
+</span></code></pre></div><p>A common mis-conception/confusion here is that either of the following approaches would also work, but they do not work as you&rsquo;d expect:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#6272a4">// doesn&#39;t work like you want!
+</span><span style="color:#6272a4"></span>Bar.prototype <span style="color:#ff79c6">=</span> Foo.prototype;
+
+<span style="color:#6272a4">// works kinda like you want, but with
+</span><span style="color:#6272a4">// side-effects you probably don&#39;t want :(
+</span><span style="color:#6272a4"></span>Bar.prototype <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> Foo();
+</code></pre></div><p>the right way is:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#6272a4">// &#34;make a new &#39;Bar dot prototype&#39; object that&#39;s linked to &#39;Foo dot prototype&#39;.&#34;
+</span><span style="color:#6272a4">// pre-ES6
+</span><span style="color:#6272a4">// throws away default existing `Bar.prototype`
+</span><span style="color:#6272a4"></span>Bar.prototype <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">Object</span>.create( Foo.prototype );
+
+<span style="color:#6272a4">// ES6+
+</span><span style="color:#6272a4">// modifies existing `Bar.prototype`
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">Object</span>.setPrototypeOf( Bar.prototype, Foo.prototype );
+</code></pre></div><p><strong>reference</strong>: <a href="https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch5.md#prototypal-inheritance">You-Dont-Know-JS: &ldquo;(Prototypal) Inheritance&rdquo;</a></p>
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by tayu_tayu</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2019-03-22T09:00:00Z">March 22, 2019</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=Js%20tips%20I%20can%27t%20remember&url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-03-22-js-tips%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-03-22-js-tips%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-03-22-js-tips%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	JavaScript
+            	</span>
+            
+        </section>
+                        
+    </footer>
+</article>
+	</div>
+</main>
+<footer id="site-footer">
+  <div class="container">
+    
+    <a href="https://www.twitter.com/tayu_tayu" title="Twitter" target="_blank"><span class="tooltip"><i class="fa fa-twitter"></i></span></a>
+    
+    
+    <a href="https://Navarathri.github.io/blog/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+    <section>&copy; <a href="https://twitter.com/tayu_tayu" title="Twitter@tayu_tayu" target="_blank"><span class="tooltip"></span>tayu_tayu</span></a> 2020 | All rights reserved</section>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://Navarathri.github.io/blog/js/fittext.js"></script>
+<script type="text/javascript">
+  $(".heading").fitText();
+</script>
+
+
+
+
+</body>
+</html>

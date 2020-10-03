@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="tayu_tayu">
+  
+	
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:creator" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:domain" content="https://Navarathri.github.io/blog">
+	
+        <meta property="og:site_name" content="たくあんは食べ物。">
+        <meta property="og:title" content="たくあんは食べ物。">
+        <meta property="og:url" content="https://Navarathri.github.io/blog/posts/2019-11-10-encodeuricomponent/">
+        <meta property="og:description" content="tayu_tayu">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="tayu_tayu" />
+        <meta property="og:article:published_time" content="2019-11-10T09:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.75.1" />
+  <title>JavaScript URI エンコーディング &middot; たくあんは食べ物。</title>
+  <link rel="canonical" href="https://Navarathri.github.io/blog" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS"
+    href=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://Navarathri.github.io/blog/css/main.css"
+  />
+  <link
+    href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    rel="stylesheet"
+  />
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="https://Navarathri.github.io/blog" alt="たくあんは食べ物。"><h1 class="blog-title heading">たくあんは食べ物。</h1></a>
+            <p class="blog-description">tayu_tayu</p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="posts">
+	<header class="post-header">
+        <h3 class="p-post-title">JavaScript URI エンコーディング</h3>
+    </header>
+
+    <section class="post-content">
+        <h2 id="まとめ">まとめ</h2>
+<p><code>encodeURI()</code>と<code>encodeURIComponent()</code>はRFC 2396準拠である。
+<code>encodeURI()</code> は完全な URI を表すのに必要な文字 (Reserved Characters) はエンコードしません。
+また、予約されていないが &ldquo;そのまま&rdquo; URI に使用できる(Unreserved Marks) 文字をエンコードしません。
+<code>encodeURIComponent()</code> は &ldquo;Unreserved Marks&rdquo; 文字をエンコードしません。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#8be9fd;font-style:italic">var</span> set1 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;;,/?:@&amp;=+$#&#34;</span>; <span style="color:#6272a4">// Reserved Characters
+</span><span style="color:#6272a4"></span><span style="color:#8be9fd;font-style:italic">var</span> set2 <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;-_.!~*&#39;()&#34;</span>;   <span style="color:#6272a4">// Unreserved Marks
+</span><span style="color:#6272a4"></span>
+console.log(<span style="color:#8be9fd;font-style:italic">encodeURI</span>(set1)); <span style="color:#6272a4">// ;,/?:@&amp;=+$
+</span><span style="color:#6272a4"></span>console.log(<span style="color:#8be9fd;font-style:italic">encodeURI</span>(set2)); <span style="color:#6272a4">// -_.!~*&#39;()
+</span><span style="color:#6272a4"></span>
+console.log(<span style="color:#8be9fd;font-style:italic">encodeURIComponent</span>(set1)); <span style="color:#6272a4">// %3B%2C%2F%3F%3A%40%26%3D%2B%24
+</span><span style="color:#6272a4"></span>console.log(<span style="color:#8be9fd;font-style:italic">encodeURIComponent</span>(set2)); <span style="color:#6272a4">// -_.!~*&#39;()
+</span></code></pre></div><h2 id="rfc2396-appendix-a">rfc2396 appendix-A</h2>
+<p><a href="https://tools.ietf.org/html/rfc2396#appendix-A">https://tools.ietf.org/html/rfc2396#appendix-A</a></p>
+<pre><code>URI-reference = [ absoluteURI | relativeURI ] [ &quot;#&quot; fragment ]
+      absoluteURI   = scheme &quot;:&quot; ( hier_part | opaque_part )
+      relativeURI   = ( net_path | abs_path | rel_path ) [ &quot;?&quot; query ]
+
+      hier_part     = ( net_path | abs_path ) [ &quot;?&quot; query ]
+      opaque_part   = uric_no_slash *uric
+
+      uric_no_slash = unreserved | escaped | &quot;;&quot; | &quot;?&quot; | &quot;:&quot; | &quot;@&quot; |
+                      &quot;&amp;&quot; | &quot;=&quot; | &quot;+&quot; | &quot;$&quot; | &quot;,&quot;
+
+      net_path      = &quot;//&quot; authority [ abs_path ]
+      abs_path      = &quot;/&quot;  path_segments
+      rel_path      = rel_segment [ abs_path ]
+
+      rel_segment   = 1*( unreserved | escaped |
+                          &quot;;&quot; | &quot;@&quot; | &quot;&amp;&quot; | &quot;=&quot; | &quot;+&quot; | &quot;$&quot; | &quot;,&quot; )
+
+      scheme        = alpha *( alpha | digit | &quot;+&quot; | &quot;-&quot; | &quot;.&quot; )
+
+      authority     = server | reg_name
+
+      reg_name      = 1*( unreserved | escaped | &quot;$&quot; | &quot;,&quot; |
+                          &quot;;&quot; | &quot;:&quot; | &quot;@&quot; | &quot;&amp;&quot; | &quot;=&quot; | &quot;+&quot; )
+
+      server        = [ [ userinfo &quot;@&quot; ] hostport ]
+      userinfo      = *( unreserved | escaped |
+                         &quot;;&quot; | &quot;:&quot; | &quot;&amp;&quot; | &quot;=&quot; | &quot;+&quot; | &quot;$&quot; | &quot;,&quot; )
+
+      hostport      = host [ &quot;:&quot; port ]
+      host          = hostname | IPv4address
+      hostname      = *( domainlabel &quot;.&quot; ) toplabel [ &quot;.&quot; ]
+      domainlabel   = alphanum | alphanum *( alphanum | &quot;-&quot; ) alphanum
+      toplabel      = alpha | alpha *( alphanum | &quot;-&quot; ) alphanum
+      IPv4address   = 1*digit &quot;.&quot; 1*digit &quot;.&quot; 1*digit &quot;.&quot; 1*digit
+      port          = *digit
+
+      path          = [ abs_path | opaque_part ]
+      path_segments = segment *( &quot;/&quot; segment )
+      segment       = *pchar *( &quot;;&quot; param )
+      param         = *pchar
+      pchar         = unreserved | escaped |
+                      &quot;:&quot; | &quot;@&quot; | &quot;&amp;&quot; | &quot;=&quot; | &quot;+&quot; | &quot;$&quot; | &quot;,&quot;
+
+      query         = *uric
+
+      fragment      = *uric
+      
+      uric          = reserved | unreserved | escaped
+      reserved      = &quot;;&quot; | &quot;/&quot; | &quot;?&quot; | &quot;:&quot; | &quot;@&quot; | &quot;&amp;&quot; | &quot;=&quot; | &quot;+&quot; |
+                      &quot;$&quot; | &quot;,&quot;
+      unreserved    = alphanum | mark
+      mark          = &quot;-&quot; | &quot;_&quot; | &quot;.&quot; | &quot;!&quot; | &quot;~&quot; | &quot;*&quot; | &quot;'&quot; |
+                      &quot;(&quot; | &quot;)&quot;
+
+      escaped       = &quot;%&quot; hex hex
+      hex           = digit | &quot;A&quot; | &quot;B&quot; | &quot;C&quot; | &quot;D&quot; | &quot;E&quot; | &quot;F&quot; |
+                              &quot;a&quot; | &quot;b&quot; | &quot;c&quot; | &quot;d&quot; | &quot;e&quot; | &quot;f&quot;
+
+      alphanum      = alpha | digit
+      alpha         = lowalpha | upalpha
+
+      lowalpha = &quot;a&quot; | &quot;b&quot; | &quot;c&quot; | &quot;d&quot; | &quot;e&quot; | &quot;f&quot; | &quot;g&quot; | &quot;h&quot; | &quot;i&quot; |
+                 &quot;j&quot; | &quot;k&quot; | &quot;l&quot; | &quot;m&quot; | &quot;n&quot; | &quot;o&quot; | &quot;p&quot; | &quot;q&quot; | &quot;r&quot; |
+                 &quot;s&quot; | &quot;t&quot; | &quot;u&quot; | &quot;v&quot; | &quot;w&quot; | &quot;x&quot; | &quot;y&quot; | &quot;z&quot;
+      upalpha  = &quot;A&quot; | &quot;B&quot; | &quot;C&quot; | &quot;D&quot; | &quot;E&quot; | &quot;F&quot; | &quot;G&quot; | &quot;H&quot; | &quot;I&quot; |
+                 &quot;J&quot; | &quot;K&quot; | &quot;L&quot; | &quot;M&quot; | &quot;N&quot; | &quot;O&quot; | &quot;P&quot; | &quot;Q&quot; | &quot;R&quot; |
+                 &quot;S&quot; | &quot;T&quot; | &quot;U&quot; | &quot;V&quot; | &quot;W&quot; | &quot;X&quot; | &quot;Y&quot; | &quot;Z&quot;
+      digit    = &quot;0&quot; | &quot;1&quot; | &quot;2&quot; | &quot;3&quot; | &quot;4&quot; | &quot;5&quot; | &quot;6&quot; | &quot;7&quot; |
+                 &quot;8&quot; | &quot;9&quot;
+</code></pre><h2 id="参考">参考</h2>
+<p><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent">https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI">https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI</a></p>
+<p><a href="https://qiita.com/aosho235/items/0581fc82f8ce2c5ac055">https://qiita.com/aosho235/items/0581fc82f8ce2c5ac055</a></p>
+<p><a href="https://tools.ietf.org/html/rfc2396">https://tools.ietf.org/html/rfc2396</a></p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by tayu_tayu</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2019-11-10T09:00:00Z">November 10, 2019</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=JavaScript%20URI%20%e3%82%a8%e3%83%b3%e3%82%b3%e3%83%bc%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0&url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-11-10-encodeuricomponent%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-11-10-encodeuricomponent%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-11-10-encodeuricomponent%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	JavaScript
+            	</span>
+            
+        </section>
+                        
+    </footer>
+</article>
+	</div>
+</main>
+<footer id="site-footer">
+  <div class="container">
+    
+    <a href="https://www.twitter.com/tayu_tayu" title="Twitter" target="_blank"><span class="tooltip"><i class="fa fa-twitter"></i></span></a>
+    
+    
+    <a href="https://Navarathri.github.io/blog/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+    <section>&copy; <a href="https://twitter.com/tayu_tayu" title="Twitter@tayu_tayu" target="_blank"><span class="tooltip"></span>tayu_tayu</span></a> 2020 | All rights reserved</section>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://Navarathri.github.io/blog/js/fittext.js"></script>
+<script type="text/javascript">
+  $(".heading").fitText();
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="tayu_tayu">
+  
+	
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:creator" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:domain" content="https://Navarathri.github.io/blog">
+	
+        <meta property="og:site_name" content="たくあんは食べ物。">
+        <meta property="og:title" content="たくあんは食べ物。">
+        <meta property="og:url" content="https://Navarathri.github.io/blog/posts/2019-11-23-uipath-orchestrator/">
+        <meta property="og:description" content="tayu_tayu">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="tayu_tayu" />
+        <meta property="og:article:published_time" content="2019-11-23T09:00:00Z" />
+    
+        <meta name="generator" content="Hugo 0.75.1" />
+  <title>uipath ノート（三）- uipath orchestrator &middot; たくあんは食べ物。</title>
+  <link rel="canonical" href="https://Navarathri.github.io/blog" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS"
+    href=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://Navarathri.github.io/blog/css/main.css"
+  />
+  <link
+    href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    rel="stylesheet"
+  />
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="https://Navarathri.github.io/blog" alt="たくあんは食べ物。"><h1 class="blog-title heading">たくあんは食べ物。</h1></a>
+            <p class="blog-description">tayu_tayu</p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="posts">
+	<header class="post-header">
+        <h3 class="p-post-title">uipath ノート（三）- uipath orchestrator</h3>
+    </header>
+
+    <section class="post-content">
+        <h2 id="利用手順">利用手順</h2>
+<p>Official doc: <a href="https://docs.uipath.com/robot/docs/from-orchestrator-and-the-orchestrator-settings-window">https://docs.uipath.com/robot/docs/from-orchestrator-and-the-orchestrator-settings-window</a></p>
+<h3 id="マシンを追加">マシンを追加</h3>
+<p>マシン側でマシン名とユーザ名を確認</p>
+<pre><code>C:\Users\user&gt;hostname
+DESKTOP-ABCDE5F
+
+C:\Users\user&gt;whoami
+desktop-abcde5f\user
+
+C:\Users\user&gt;
+</code></pre><p>追加完了後、マシンキーを取得する。</p>
+<h3 id="ロボットを登録">ロボットを登録</h3>
+<ul>
+<li>Type: studio (開発用？)</li>
+<li>Domain/Username: 上記のユーザ名</li>
+</ul>
+<h3 id="ローカルのorchestrator設定">ローカルのorchestrator設定</h3>
+<p>Uipath Robotを開き⇒orchestratorの設定で、上記のマシンキーを入力する。
+orchestrator URLに <code>https://platform.uipath.com/</code> を入力する.
+<code>Invalid machine key</code>というエラーが出たら、下記のようなURLを試す：</p>
+<pre><code>https://platform.uipath.com/&lt;account name&gt;/&lt;service name&gt;
+</code></pre><p>参照：<a href="https://forum.uipath.com/t/uipath-orchestrator-error-invalid-machine-key/153438/16">Uipath orchestrator error : invalid machine key</a></p>
+<h3 id="ロボットグループenvironment作成">ロボットグループ(Environment)作成</h3>
+<h3 id="プロジェクトをパブリッシュpublish">プロジェクトをパブリッシュ(Publish)</h3>
+<h3 id="プロセスを追加">プロセスを追加</h3>
+<p>Automations　⇒　Processes</p>
+<h3 id="ジョブjobsの実行">ジョブ(Jobs)の実行</h3>
+<p>Monitoring　⇒　Jobs</p>
+<h2 id="その他">その他</h2>
+<h3 id="再パブリッシュするとprocessが最新バージョンを使うため変更作業が必要">再パブリッシュすると、Processが最新バージョンを使うため、変更作業が必要</h3>
+<p>Processes　⇒　More Options　⇒　View Process　⇒　最新のバージョンに切り替える</p>
+<h3 id="ジョブの停止">ジョブの停止</h3>
+<ul>
+<li>停止(Stop)：必ずワークフロー内で「停止すべきか確認(Should Stop)」アクティビティを使用する</li>
+<li>強制終了(Kill)：処理中の内容に関わらず、ジョブを停止する</li>
+</ul>
+<h3 id="アクティブなジョブは削除できない">アクティブなジョブは削除できない</h3>
+<h3 id="パラメーター変更の優先順位">パラメーター変更の優先順位</h3>
+<p>ジョブ (Jobs) -&gt; プロセス (Processes) -&gt; パッケージ(UiPath Studio)</p>
+<h3 id="マシンテンプレート">マシンテンプレート</h3>
+<p>Machine Templates only work for Active Directory users, Attended Floating Robots and Studio Floating Robots.</p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by tayu_tayu</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2019-11-23T09:00:00Z">November 23, 2019</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=uipath%20%e3%83%8e%e3%83%bc%e3%83%88%ef%bc%88%e4%b8%89%ef%bc%89-%20uipath%20orchestrator&url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-11-23-uipath-orchestrator%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-11-23-uipath-orchestrator%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2019-11-23-uipath-orchestrator%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	RPA
+            	</span>
+            
+        </section>
+                        
+    </footer>
+</article>
+	</div>
+</main>
+<footer id="site-footer">
+  <div class="container">
+    
+    <a href="https://www.twitter.com/tayu_tayu" title="Twitter" target="_blank"><span class="tooltip"><i class="fa fa-twitter"></i></span></a>
+    
+    
+    <a href="https://Navarathri.github.io/blog/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+    <section>&copy; <a href="https://twitter.com/tayu_tayu" title="Twitter@tayu_tayu" target="_blank"><span class="tooltip"></span>tayu_tayu</span></a> 2020 | All rights reserved</section>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://Navarathri.github.io/blog/js/fittext.js"></script>
+<script type="text/javascript">
+  $(".heading").fitText();
+</script>
+
+
+
+
+</body>
+</html>

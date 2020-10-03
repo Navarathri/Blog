@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="tayu_tayu">
+  
+	
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:creator" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:domain" content="https://Navarathri.github.io/blog">
+	
+        <meta property="og:site_name" content="たくあんは食べ物。">
+        <meta property="og:title" content="たくあんは食べ物。">
+        <meta property="og:url" content="https://Navarathri.github.io/blog/posts/2017-02-18-hash/">
+        <meta property="og:description" content="tayu_tayu">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="tayu_tayu" />
+        <meta property="og:article:published_time" content="2017-02-18T19:19:01Z" />
+    
+        <meta name="generator" content="Hugo 0.75.1" />
+  <title>java散列知识点总结 &middot; たくあんは食べ物。</title>
+  <link rel="canonical" href="https://Navarathri.github.io/blog" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS"
+    href=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://Navarathri.github.io/blog/css/main.css"
+  />
+  <link
+    href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    rel="stylesheet"
+  />
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="https://Navarathri.github.io/blog" alt="たくあんは食べ物。"><h1 class="blog-title heading">たくあんは食べ物。</h1></a>
+            <p class="blog-description">tayu_tayu</p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="posts">
+	<header class="post-header">
+        <h3 class="p-post-title">java散列知识点总结</h3>
+    </header>
+
+    <section class="post-content">
+        <p>java 的根类 <code>Object</code> 具有 <code>hashcode</code> 方法。当 <code>equal</code> 方法被重写时也应当重写 <code>hashcode</code> 方法。</p>
+<h2 id="基本数据类型的散列码">基本数据类型的散列码</h2>
+<ul>
+<li><code>byte</code> <code>short</code> <code>int</code> <code>char</code> 类型的搜索键将会转换为 <code>int</code>。</li>
+<li><code>float</code> 类型的搜索键使用 <code>Float.floatToIntBits(key)</code> 作为散列码。</li>
+<li><code>long</code> 类型的搜索键会进行折叠操作，如下：</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">iny hashCode <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span><span style="color:#ff79c6">)</span> <span style="color:#ff79c6">(</span>key <span style="color:#ff79c6">^</span> <span style="color:#ff79c6">(</span>key <span style="color:#ff79c6">&gt;&gt;</span> 32<span style="color:#ff79c6">));</span>
+</code></pre></div><ul>
+<li><code>double</code> 类型的搜索键会使用 <code>Double.doubleToLongBits(key)</code> 方法转换为 <code>long</code> 类型然后再进行折叠。</li>
+</ul>
+<h2 id="字符串类型的散列码">字符串类型的散列码</h2>
+<p>对于字符串一般使用多项式散列码进行计算，</p>
+<p><del>这里放个公式的图</del></p>
+<p>b的较好取值为31，33，37，39，41。在 java String 类中 <code>b</code> 取31。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#8be9fd;font-style:italic">public</span> <span style="color:#8be9fd;font-style:italic">static</span> <span style="color:#8be9fd">int</span> <span style="color:#50fa7b">hash</span><span style="color:#ff79c6">(</span>String key<span style="color:#ff79c6">,</span> <span style="color:#8be9fd">int</span> tableSize<span style="color:#ff79c6">)</span>
+<span style="color:#ff79c6">{</span>
+    <span style="color:#8be9fd">int</span> hashVal <span style="color:#ff79c6">=</span> 0<span style="color:#ff79c6">;</span>
+
+    <span style="color:#ff79c6">for</span> <span style="color:#ff79c6">(</span><span style="color:#8be9fd">int</span> i <span style="color:#ff79c6">=</span> 0<span style="color:#ff79c6">;</span> i <span style="color:#ff79c6">&lt;</span> key<span style="color:#ff79c6">.</span><span style="color:#50fa7b">length</span><span style="color:#ff79c6">();</span> i<span style="color:#ff79c6">++)</span>
+        hashVal <span style="color:#ff79c6">=</span> 37<span style="color:#ff79c6">*</span>hashVal <span style="color:#ff79c6">+</span> key<span style="color:#ff79c6">.</span><span style="color:#50fa7b">charAt</span><span style="color:#ff79c6">(</span>i<span style="color:#ff79c6">);</span>
+
+    hashVal <span style="color:#ff79c6">%=</span> tableSize<span style="color:#ff79c6">;</span>
+    <span style="color:#ff79c6">if</span> <span style="color:#ff79c6">(</span>hashVal <span style="color:#ff79c6">&lt;</span> 0<span style="color:#ff79c6">)</span>
+        hashVal <span style="color:#ff79c6">+=</span> tableSize<span style="color:#ff79c6">;</span>
+
+    <span style="color:#ff79c6">return</span> hashVal<span style="color:#ff79c6">;</span>
+<span style="color:#ff79c6">}</span>
+</code></pre></div><h2 id="压缩散列码">压缩散列码</h2>
+<p>由于散列码可能是很大的正数，通常应该对其进行压缩以防止超出索引的范围。若索引范围为 <code>0 ~ n - 1</code> ，通常的做法是 <code>h(hashCode) = hashCode % N</code> ，选择N为大于2的素数。
+<code>java.util.HashMap</code> 的实现中，将N设置为2的幂值，这样可以使用位运算代替上述的取模：<code>h(hashCode) = hashCode &amp; (N - 1)</code> ，两者是完全等价的。</p>
+<h2 id="处理冲突">处理冲突</h2>
+<h3 id="开放地址法">开放地址法</h3>
+<p>开放地址法是在冲突发生时，在散列表中找到一个开放位置的过程。</p>
+<ul>
+<li>线性探测，存在成簇问题</li>
+<li>二次探测，存在二次成簇问题，并且不能保证一个开放的单元总是可以被找到。</li>
+<li>再哈希法</li>
+</ul>
+<h3 id="链地址法">链地址法</h3>
+<p>链地址法是将具有同样索引的条目放在同一位置，每个位置使用一个桶(ArrayList or LinkedList)来放置多个条目。</p>
+<h2 id="装填因子">装填因子</h2>
+<p>装填因子衡量一个散列表有多满。<code>lamda = n / N</code> 。对于开放地址法，装填因子介于 0 ~ 1，对于链地址法，装填因子可能为任意值。通常开放地址法需要将装填因子维持在0.5以下，而链地址法为0.9以下。<code>java.util.HashMap</code> 采用了阈值0.75。</p>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by tayu_tayu</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2017-02-18T19:19:01Z">February 18, 2017</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=java%e6%95%a3%e5%88%97%e7%9f%a5%e8%af%86%e7%82%b9%e6%80%bb%e7%bb%93&url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2017-02-18-hash%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2017-02-18-hash%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2017-02-18-hash%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	Algorithms
+            	</span>
+            
+        </section>
+                        
+    </footer>
+</article>
+	</div>
+</main>
+<footer id="site-footer">
+  <div class="container">
+    
+    <a href="https://www.twitter.com/tayu_tayu" title="Twitter" target="_blank"><span class="tooltip"><i class="fa fa-twitter"></i></span></a>
+    
+    
+    <a href="https://Navarathri.github.io/blog/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+    <section>&copy; <a href="https://twitter.com/tayu_tayu" title="Twitter@tayu_tayu" target="_blank"><span class="tooltip"></span>tayu_tayu</span></a> 2020 | All rights reserved</section>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://Navarathri.github.io/blog/js/fittext.js"></script>
+<script type="text/javascript">
+  $(".heading").fitText();
+</script>
+
+
+
+
+</body>
+</html>

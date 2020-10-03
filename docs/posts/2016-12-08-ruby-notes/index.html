@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" prefix="og: http://ogp.me/ns#" xmlns:og="http://ogp.me/ns#"><!--<![endif]-->
+
+<head>
+          <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="author" content="tayu_tayu">
+  
+	
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:creator" content="@https://twitter.com/tayu_tayu">
+        <meta name="twitter:domain" content="https://Navarathri.github.io/blog">
+	
+        <meta property="og:site_name" content="たくあんは食べ物。">
+        <meta property="og:title" content="たくあんは食べ物。">
+        <meta property="og:url" content="https://Navarathri.github.io/blog/posts/2016-12-08-ruby-notes/">
+        <meta property="og:description" content="tayu_tayu">
+    
+        <meta property="og:type" content="article" />
+        <meta property="og:article:author" content="tayu_tayu" />
+        <meta property="og:article:published_time" content="2016-12-08T22:54:49Z" />
+    
+        <meta name="generator" content="Hugo 0.75.1" />
+  <title>ruby学习笔记 &middot; たくあんは食べ物。</title>
+  <link rel="canonical" href="https://Navarathri.github.io/blog" />
+  <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="RSS"
+    href=""
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://Navarathri.github.io/blog/css/main.css"
+  />
+  <link
+    href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300|Montserrat:700"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css"
+    rel="stylesheet"
+  />
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+<!--[if lt IE 7]><p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chrome/‎">install Google Chrome</a> to experience this site.</p><![endif]-->
+
+    <header id="site-header">
+        <div class="container">
+            <a href="https://Navarathri.github.io/blog" alt="たくあんは食べ物。"><h1 class="blog-title heading">たくあんは食べ物。</h1></a>
+            <p class="blog-description">tayu_tayu</p>
+        </div>
+    </header>
+<main class="content" role="main">
+	<div class="container">
+		<article class="posts">
+	<header class="post-header">
+        <h3 class="p-post-title">ruby学习笔记</h3>
+    </header>
+
+    <section class="post-content">
+        <h2 id="regular-expressions">regular expressions</h2>
+<p><code>=~</code>是用于正则表达式的匹配操作符。返回匹配到的字符串位置或nil。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#f1fa8c">&#34;abcdef&#34;</span> <span style="color:#ff79c6">=~</span> <span style="color:#f1fa8c">/d/</span> <span style="color:#6272a4"># return 3</span>
+<span style="color:#f1fa8c">&#34;aaaaaa&#34;</span> <span style="color:#ff79c6">=~</span> <span style="color:#f1fa8c">/d/</span> <span style="color:#6272a4"># return nil</span>
+</code></pre></div><!-- raw HTML omitted -->
+<h2 id="和">!和?</h2>
+<p>The exclamation point (!, sometimes pronounced aloud as &ldquo;bang!&quot;) indicates something potentially destructive, that is to say, something that can change the value of what it touches.</p>
+<pre><code>ruby&gt; s1 = &quot;forth&quot;
+  &quot;forth&quot;
+ruby&gt; s1.chop!       # This changes s1.
+  &quot;fort&quot;
+ruby&gt; s2 = s1.chop   # This puts a changed copy in s2,
+  &quot;for&quot;
+ruby&gt; s1             # ... without disturbing s1.
+  &quot;fort&quot;
+</code></pre><p>You&rsquo;ll also sometimes see chomp and chomp! used. These are more selective: the end of a string gets bit off only if it happens to be a newline.</p>
+<p>The other method naming convention is the question mark (?, sometimes pronounced aloud as &ldquo;huh?&quot;) indicates a &ldquo;predicate&rdquo; method, one that can return either true or false.</p>
+<h2 id="四种内部中断循环的方式">四种内部中断循环的方式</h2>
+<ul>
+<li><code>break</code></li>
+<li><code>next</code> 等同与continue</li>
+<li><code>redo</code> restarts the current iteration</li>
+<li><code>return</code></li>
+</ul>
+<h2 id="迭代器-iterator">迭代器 iterator</h2>
+<p>Ruby&rsquo;s String type has some useful iterators. <code>each_byte</code> is an iterator for each character in the string.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">irb<span style="color:#ff79c6">(</span>main<span style="color:#ff79c6">)</span>:001:0&gt; <span style="color:#f1fa8c">&#34;abc&#34;</span>.each_byte<span style="color:#ff79c6">{</span>|c| <span style="color:#8be9fd;font-style:italic">printf</span> <span style="color:#f1fa8c">&#34;&lt;%c&gt;&#34;</span>, c<span style="color:#ff79c6">}</span>; print <span style="color:#f1fa8c">&#34;\n&#34;</span>
+&lt;a&gt;&lt;b&gt;&lt;c&gt;
+<span style="color:#ff79c6">=</span>&gt; nil
+</code></pre></div><p>Another iterator of String is <code>each_line</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">irb<span style="color:#ff79c6">(</span>main<span style="color:#ff79c6">)</span>:002:0&gt; <span style="color:#f1fa8c">&#34;a\nb\nc\n&#34;</span>.each_line<span style="color:#ff79c6">{</span>|l| print l<span style="color:#ff79c6">}</span>
+a
+b
+<span style="color:#8be9fd;font-style:italic">c</span>
+<span style="color:#ff79c6">=</span>&gt; <span style="color:#f1fa8c">&#34;a\nb\nc\n&#34;</span>
+</code></pre></div><p>ruby的 <code>for in</code> 也是一种迭代。We can use a control structure <code>retry</code> in conjunction with an iterated loop, and it will retry the loop from the beginning.</p>
+<h3 id="yield">yield</h3>
+<p><code>yield</code> occurs sometimes in a definition of an iterator. <code>yield</code> moves control to the block of code that is passed to the iterator (this will be explored in more detail in the chapter about procedure objects). The following example defines an iterator repeat, which repeats a block of code the number of times specified in an argument.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">irb(main):<span style="color:#bd93f9">003</span>:<span style="color:#bd93f9">0</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">repeat</span>(num)
+irb(main):<span style="color:#bd93f9">004</span>:<span style="color:#bd93f9">1</span><span style="color:#ff79c6">&gt;</span>     <span style="color:#ff79c6">while</span> num <span style="color:#ff79c6">&gt;</span> <span style="color:#bd93f9">0</span>
+irb(main):<span style="color:#bd93f9">005</span>:<span style="color:#bd93f9">2</span><span style="color:#ff79c6">&gt;</span>         <span style="color:#ff79c6">yield</span>
+irb(main):<span style="color:#bd93f9">006</span>:<span style="color:#bd93f9">2</span><span style="color:#ff79c6">&gt;</span>         num <span style="color:#ff79c6">-=</span> <span style="color:#bd93f9">1</span>
+irb(main):<span style="color:#bd93f9">007</span>:<span style="color:#bd93f9">2</span><span style="color:#ff79c6">&gt;</span>     <span style="color:#ff79c6">end</span>
+irb(main):<span style="color:#bd93f9">00</span><span style="color:#bd93f9">8</span>:<span style="color:#bd93f9">1</span><span style="color:#ff79c6">&gt;</span> <span style="color:#ff79c6">end</span>
+<span style="color:#ff79c6">=&gt;</span> <span style="color:#f1fa8c">:repeat</span>
+irb(main):<span style="color:#bd93f9">00</span><span style="color:#bd93f9">9</span>:<span style="color:#bd93f9">0</span><span style="color:#ff79c6">&gt;</span> repeat(<span style="color:#bd93f9">3</span>) { <span style="color:#8be9fd;font-style:italic">puts</span> <span style="color:#f1fa8c">&#34;foo&#34;</span> }
+foo
+foo
+foo
+<span style="color:#ff79c6">=&gt;</span> <span style="color:#ff79c6">nil</span>
+</code></pre></div><h2 id="class">class</h2>
+<h3 id="继承">继承</h3>
+<p>继承的格式为:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Superclass</span>
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">breathe</span>
+        <span style="color:#8be9fd;font-style:italic">puts</span> <span style="color:#f1fa8c">&#34;inhale and exhale&#34;</span>
+    <span style="color:#ff79c6">end</span>
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">identify</span>
+        <span style="color:#8be9fd;font-style:italic">puts</span> <span style="color:#f1fa8c">&#34;I&#39;m super&#34;</span>
+    <span style="color:#ff79c6">end</span>
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">speak</span>(word)
+        <span style="color:#8be9fd;font-style:italic">puts</span> word
+    <span style="color:#ff79c6">end</span>
+<span style="color:#ff79c6">end</span>
+
+<span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Subclass</span><span style="color:#ff79c6">&lt;</span>Superclass
+    <span style="color:#6272a4"># code...</span>
+<span style="color:#ff79c6">end</span>
+</code></pre></div><p>可在在子类中重新声明基类方法，也可以使用<code>super</code>关键字来扩展基类方法。<code>super</code>也允许我们传递参数给基类方法。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Subclass</span><span style="color:#ff79c6">&lt;</span>Superclass
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">identify</span>
+        <span style="color:#ff79c6">super</span>
+        <span style="color:#8be9fd;font-style:italic">puts</span> <span style="color:#f1fa8c">&#34;I&#39;m sub too&#34;</span>
+    <span style="color:#ff79c6">end</span>
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">speak</span>(word)
+        <span style="color:#ff79c6">super</span>(<span style="color:#f1fa8c">&#34;this is from Superclass&#34;</span>)
+        <span style="color:#8be9fd;font-style:italic">puts</span> <span style="color:#f1fa8c">&#34;now it&#39;s from Subclass: </span><span style="color:#f1fa8c">#{</span>word<span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>
+    <span style="color:#ff79c6">end</span>
+<span style="color:#ff79c6">end</span>
+</code></pre></div><h3 id="初始化构造函数">初始化（构造函数）</h3>
+<p><code>ruby</code>使用<code>initialize</code>关键字来实现构造函数的功能。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Fruit</span>
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">initialize</span>( k<span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;apple&#34;</span>)
+        <span style="color:#8be9fd;font-style:italic">@kind</span> <span style="color:#ff79c6">=</span> k
+        <span style="color:#8be9fd;font-style:italic">@condition</span> <span style="color:#ff79c6">=</span> <span style="color:#f1fa8c">&#34;ripe&#34;</span>
+    <span style="color:#ff79c6">end</span>
+<span style="color:#ff79c6">end</span>
+
+apple <span style="color:#ff79c6">=</span> Fruit<span style="color:#ff79c6">.</span>new <span style="color:#f1fa8c">&#34;apple&#34;</span>
+</code></pre></div><h2 id="variables">variables</h2>
+<ul>
+<li><code>[a-z] or _</code> 本地变量</li>
+<li><code>$</code> 全局变量</li>
+<li><code>@</code> 实例变量 instance variable</li>
+<li><code>[A-Z]</code> 常量</li>
+</ul>
+<h3 id="全局变量">全局变量</h3>
+<p>全局变量以 <code>$</code> 开头。初始化之前，全局变量的值为<code>nil</code>。可定义一段procedure来追踪全局变量。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#8be9fd;font-style:italic">$x</span> <span style="color:#6272a4">#return nil</span>
+<span style="color:#8be9fd;font-style:italic">trace_var</span> :<span style="color:#8be9fd;font-style:italic">$x</span>, <span style="color:#8be9fd;font-style:italic">proc</span>{<span style="color:#8be9fd;font-style:italic">puts</span> <span style="color:#f1fa8c">&#34;$x is now </span><span style="color:#f1fa8c">#{</span><span style="color:#8be9fd;font-style:italic">$x</span><span style="color:#f1fa8c">}</span><span style="color:#f1fa8c">&#34;</span>}
+<span style="color:#8be9fd;font-style:italic">$x</span> <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">5</span> <span style="color:#6272a4">#return $x is now 5</span>
+</code></pre></div><p>一些特殊的变量（不一定是全局作用域）：</p>
+<ul>
+<li><code>$!</code>	latest error message</li>
+<li><code>$@</code>	location of error</li>
+<li><code>$_</code>	上一次由gets读入的字符串</li>
+<li><code>$.</code>	line number last read by interpreter</li>
+<li><code>$&amp;</code>	string last matched by regexp</li>
+<li><code>$~</code>	the last regexp match, as an array of subexpressions</li>
+<li><code>$n</code>	the nth subexpression in the last match (same as $~[n])</li>
+<li><code>$=</code>	case-insensitivity flag</li>
+<li><code>$/</code>	input record separator</li>
+<li><code>$\</code>	output record separator</li>
+<li><code>$0</code>	the name of the ruby script file</li>
+<li><code>$*</code>	命令行参数</li>
+<li><code>$$</code>	当前解释器的进程id</li>
+<li><code>$?</code>	上一次子进程的退出状态码</li>
+</ul>
+<h3 id="实例变量">实例变量</h3>
+<p>An instance variable has a name beginning with <code>@</code>, and its scope is confined to whatever object <strong>self</strong> refers to. Two different objects, even if they belong to the same class, are allowed to have different values for their instance variables. From outside the object, instance variables <strong>cannot be altered or even observed</strong> (i.e., ruby&rsquo;s instance variables are never public) except by whatever methods are explicitly provided by the programmer. As with globals, instance variables have the nil value until they are initialized.</p>
+<p>Instance variables do not need to be declared. This indicates a flexible object structure; in fact, each instance variable is dynamically appended to an object when it is first assigned.</p>
+<h3 id="常量">常量</h3>
+<p>常量名以大写字母开头。给常量重新赋值会得到警告。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">irb<span style="color:#ff79c6">(</span>main<span style="color:#ff79c6">)</span>:009:0&gt; <span style="color:#8be9fd;font-style:italic">Wzr</span><span style="color:#ff79c6">=</span><span style="color:#8be9fd;font-style:italic">1222</span>
+<span style="color:#ff79c6">=</span>&gt; <span style="color:#bd93f9">1222</span>
+irb<span style="color:#ff79c6">(</span>main<span style="color:#ff79c6">)</span>:010:0&gt; <span style="color:#8be9fd;font-style:italic">Wzr</span><span style="color:#ff79c6">=</span><span style="color:#bd93f9">1223</span>
+<span style="color:#ff79c6">(</span>irb<span style="color:#ff79c6">)</span>:10: warning: already initialized constant Wzr
+<span style="color:#ff79c6">(</span>irb<span style="color:#ff79c6">)</span>:9: warning: previous definition of Wzr was <span style="color:#8be9fd;font-style:italic">here</span>
+<span style="color:#ff79c6">=</span>&gt; <span style="color:#bd93f9">1223</span>
+</code></pre></div><p>常量可以在类和模块中定义，并允许外部访问。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">ConstClass</span>
+   C1<span style="color:#ff79c6">=</span><span style="color:#bd93f9">120</span>
+<span style="color:#ff79c6">end</span>
+
+ConstClass<span style="color:#ff79c6">::</span>C1 <span style="color:#6272a4"># return 120</span>
+</code></pre></div><h2 id="访问器accessor">访问器(accessor)</h2>
+<p>实例属性需要通过属性访问器访问。常规访问器有简化写法：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Fruit</span>
+   <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">kind</span><span style="color:#ff79c6">=</span>(k)
+       <span style="color:#8be9fd;font-style:italic">@kind</span> <span style="color:#ff79c6">=</span> k
+   <span style="color:#ff79c6">end</span>
+   <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">kind</span>
+       <span style="color:#8be9fd;font-style:italic">@kind</span>
+   <span style="color:#ff79c6">end</span>
+ <span style="color:#ff79c6">end</span>
+</code></pre></div><h3 id="inspect方法">inspect方法</h3>
+<p>当创建一个对象时解释器会返回一些信息：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">irb(main):<span style="color:#bd93f9">00</span><span style="color:#bd93f9">9</span>:<span style="color:#bd93f9">0</span><span style="color:#ff79c6">&gt;</span> apple <span style="color:#ff79c6">=</span> Fruit<span style="color:#ff79c6">.</span>new
+<span style="color:#ff79c6">=&gt;</span> <span style="color:#6272a4">#&lt;Fruit:0x00000000a34f58&gt;</span>
+irb(main):<span style="color:#bd93f9">010</span>:<span style="color:#bd93f9">0</span><span style="color:#ff79c6">&gt;</span>
+</code></pre></div><p>可以通过<code>inspect</code>关键字来改变这种默认行为。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#ff79c6">class</span> <span style="color:#50fa7b">Fruit</span>
+    <span style="color:#ff79c6">def</span> <span style="color:#50fa7b">inspect</span>
+        <span style="color:#f1fa8c">&#34;a fruit is created&#34;</span>
+    <span style="color:#ff79c6">end</span>
+<span style="color:#ff79c6">end</span>
+</code></pre></div><p><code>inspect</code>方法常用来调试，可通过下面两种方式显示调用：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#8be9fd;font-style:italic">p</span> anObject
+<span style="color:#8be9fd;font-style:italic">puts</span> anObject<span style="color:#ff79c6">.</span>inspect
+</code></pre></div><h3 id="shortcuts">shortcuts</h3>
+<p><code>Ruby</code>提供了访问器的一些简写形式：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">缩写</th>
+<th style="text-align:center">效果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">attr_reader :v</td>
+<td style="text-align:center">def v; @v; end</td>
+</tr>
+<tr>
+<td style="text-align:center">attr_writer :v</td>
+<td style="text-align:center">def v=(value); @v=value; end</td>
+</tr>
+<tr>
+<td style="text-align:center">attr_accessor :v</td>
+<td style="text-align:center">attr_reader :v; attr_writer :v</td>
+</tr>
+<tr>
+<td style="text-align:center">attr_accessor :v, :w</td>
+<td style="text-align:center">attr_accessor :v; attr_accessor :w</td>
+</tr>
+</tbody>
+</table>
+<h2 id="注释">注释</h2>
+<p>单行注释以<code>#</code>开头。
+块注释可使用<code>=begin</code> <code>=end</code>来标记。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#6272a4">=begin
+</span><span style="color:#6272a4">这是一段注释块。This is a comment block.
+</span><span style="color:#6272a4">Egg, I dreamed I was old.
+</span><span style="color:#6272a4">=end</span>
+</code></pre></div><h2 id="dynamic-dispatch">Dynamic Dispatch</h2>
+<h2 id="mixins">Mixins</h2>
+<p>Ruby has no multiple inheritance. But it has mixins.</p>
+<h3 id="lookup-rulres">Lookup rulres</h3>
+<p>When looking for receiver obj&rsquo;s method m,</p>
+<ul>
+<li>look in obj&rsquo;s class</li>
+<li>look in mixins the class includes(later includes shadow)</li>
+<li>look in obj&rsquo;s superclass</li>
+<li>look in mixins the superclass inculdes</li>
+<li>&hellip;</li>
+</ul>
+
+    </section>
+
+    <hr>
+
+    <footer class="post-footer">
+        <section class="f-1">
+            
+            <section class="author">
+                <p>Words by tayu_tayu</p>
+            </section>
+            
+            
+            <p class="f-post-time"><time datetime="2016-12-08T22:54:49Z">December 8, 2016</time></p>
+        </section>
+                        
+        <section class="f-2">
+            <section class="share">
+                <span>Share:
+                <a class="icon-twitter" href="http://twitter.com/share?text=ruby%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0&url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2016-12-08-ruby-notes%2f"
+                    onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="fa fa-twitter"></i>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2016-12-08-ruby-notes%2f"
+                    onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="fa fa-facebook"></i>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=https%3a%2f%2fNavarathri.github.io%2fblog%2fposts%2f2016-12-08-ruby-notes%2f"
+                   onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+                </span>
+            </section>
+
+            
+            	<span class="f-post-tags"><i class="fa fa-tag"></i>
+            	ruby
+            	</span>
+            
+        </section>
+                        
+    </footer>
+</article>
+	</div>
+</main>
+<footer id="site-footer">
+  <div class="container">
+    
+    <a href="https://www.twitter.com/tayu_tayu" title="Twitter" target="_blank"><span class="tooltip"><i class="fa fa-twitter"></i></span></a>
+    
+    
+    <a href="https://Navarathri.github.io/blog/index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
+    <section>&copy; <a href="https://twitter.com/tayu_tayu" title="Twitter@tayu_tayu" target="_blank"><span class="tooltip"></span>tayu_tayu</span></a> 2020 | All rights reserved</section>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://Navarathri.github.io/blog/js/fittext.js"></script>
+<script type="text/javascript">
+  $(".heading").fitText();
+</script>
+
+
+
+
+</body>
+</html>
