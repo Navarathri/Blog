@@ -2,6 +2,7 @@ baseURL = "https://Navarathri.github.io/"
 title = "たくあんは食べ物。"
 languageCode = "ja"
 theme = "hugo-theme-blueberry-detox"
+publishDir = "docs"  # この行を追加
 
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
