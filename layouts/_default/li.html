@@ -1,7 +1,11 @@
 <article class="li {{ .Type }}">
     <header class="post-header">
-        <h3 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-        <p class="post-time"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "January 2, 2006" }}</time></p>
+        <!-- 記事投稿日 -->
+        <span class="mgr-10">
+            <p class="post-time" style="display:inline;"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time></p>
+        </span>
+        <!-- 記事タイトル -->
+        <h3 class="post-title" style="display:inline;"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
     </header>
 
     <!--
