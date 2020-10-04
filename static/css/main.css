@@ -921,3 +921,9 @@ article.li {
   text-align: center;
   height: 10em;
 }
+.page-toc {
+  margin: 1em;
+  padding: 1em;
+  width: auto;
+  border: 1px solid #ddd;
+}

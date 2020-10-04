@@ -1,8 +1,13 @@
 <article class="{{ .Type }}">
-	<header class="post-header">
+    <header class="post-header">
         <h3 class="p-post-title">{{ .Title }}</h3>
     </header>
-
+    <div class="page-toc">
+        {{ if gt (len .TableOfContents) 33 }}
+        <h4>目次</h4>
+        {{ .TableOfContents }}
+        {{ end }}
+    </div>
     <section class="post-content">
         {{ .Content }}
     </section>
@@ -43,9 +48,9 @@
             </section> -->
 
             {{ with .Params.tags }}
-            	<span class="f-post-tags"><i class="fa fa-tag"></i>
-            	{{ delimit  . ", " }}
-            	</span>
+            <span class="f-post-tags"><i class="fa fa-tag"></i>
+                {{ delimit  . ", " }}
+            </span>
             {{ end }}
         </section>
         {{ partial "disqus.html" . }}
