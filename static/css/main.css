@@ -769,8 +769,9 @@ hr {
 
 .blog-title {
   text-transform: uppercase;
-  letter-spacing: 2px;
-  /* font-size: 75px; */
+  letter-spacing: 0.93rem;
+  /* font-size: 60x; */
+  font-size: 30rem;
 }
 
 .blog-description {
