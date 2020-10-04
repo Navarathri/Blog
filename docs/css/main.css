@@ -174,6 +174,9 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 @media print {
@@ -263,6 +266,7 @@ h2 {
 h3 {
   font-size: 36px;
   font-size: 2rem;
+  margin-top: 1.5em;
   margin-bottom: 0.825em;
 }
 
@@ -275,7 +279,8 @@ h3 {
 h4 {
   font-size: 24px;
   font-size: 1.3333333333333333rem;
-  margin-bottom: 1.2375em;
+  margin-top: 1.5em;
+  margin-bottom: 1em;
 }
 
 @media (max-width: 550px) {
@@ -769,9 +774,9 @@ hr {
 
 .blog-title {
   text-transform: uppercase;
-  letter-spacing: 0.93rem;
+  letter-spacing: 0.2rem;
   /* font-size: 60x; */
-  font-size: 30rem;
+  font-size: 5rem;
 }
 
 .blog-description {
