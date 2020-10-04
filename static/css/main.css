@@ -795,19 +795,19 @@ article.li {
 .post-header {
   text-align: center;
 }
-.post-title {
-  margin-bottom: 30px;
-}
 .post-time {
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 30px;
-  font-size: 80%;
+  font-size: 75%;
+}
+.post-title {
+  margin-bottom: 30px;
 }
 .post-footer {
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   font-size: 80%;
   margin-top: 30px;
 }
