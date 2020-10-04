@@ -457,7 +457,7 @@ body:after {
 }
 
 .container {
-  width: 80%;
+  width: 60%;
   max-width: 800px;
   margin: auto;
 }
@@ -770,7 +770,7 @@ hr {
 .blog-title {
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: 75px;
+  /* font-size: 75px; */
 }
 
 .blog-description {
