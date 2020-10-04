@@ -16,9 +16,9 @@ home = ["HTML", "RSS", "Algolia"]
 [params]
   author = "tayu_tayu"
   SEOTitle = "たくあんは食べ物。 | tayu_tayu Blog"
-  description = "tayu_tayu"
-  keyword = "Istio, Kubernetes"
-  slogan = "あああ"
+  description = "@tayu_tayu"
+  keyword = "tayu_tayu, Navarathri, travel"
+  slogan = ""
   twitter_name = "tayu_tayu"
 
   image_404 = "img/404-bg.jpg"

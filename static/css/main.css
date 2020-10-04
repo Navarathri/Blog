@@ -452,7 +452,7 @@ body:after {
   }
 }
 .container {
-  width: 90%;
+  width: 60%;
   max-width: 800px;
   margin: auto;
 }
@@ -756,7 +756,7 @@ hr {
   text-align: center;
   min-height: 15em;
   padding-top: 7em;
-  margin-bottom: 9em;
+  margin-bottom: 8em;
 }
 @media (max-width: 800px) {
   #site-header {
@@ -766,14 +766,14 @@ hr {
 }
 .blog-title {
   text-transform: uppercase;
-  letter-spacing: 6px;
+  letter-spacing: 10px;
   font-size: 75px;
 }
 .blog-description {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 4px;
   color: #b3b3b3;
-  font-size: 80%;
+  font-size: 50%;
 }
 #blog-logo img {
   margin: 0 auto 3em auto;
@@ -797,19 +797,23 @@ article.li {
 }
 .post-time {
   text-transform: uppercase;
+  text-align: left;
   letter-spacing: 4px;
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   font-size: 75%;
+  vertical-align: middle;
 }
 .post-title {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
+  text-align: left;
+  vertical-align: middle;
+  letter-spacing: 4px;
 }
 .post-footer {
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 80%;
-  margin-top: 30px;
+  letter-spacing: 4px;
+  font-size: 50%;
 }
 .pagination {
   text-align: center;

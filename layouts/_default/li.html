@@ -1,15 +1,15 @@
 <article class="li {{ .Type }}">
     <header class="post-header" style="display:inline;">
         <!-- 記事投稿日 -->
-        <p class="post-time" style="display:inline;">
+        <p class="post-time">
             <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
         </p>
         <!-- 記事タイトル -->
-        <h3 class="post-title" style="display:inline;">
+        <h3 class="post-title">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
         </h3>
     </header>
-    <footer class="post-footer" style="display:inline;">
+    <footer class="post-footer">
         <span>
             {{ with.Params.tags }}
             &nbsp;&nbsp;<i class="fa fa-tag"></i>
