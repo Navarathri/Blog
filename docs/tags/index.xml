@@ -5,6 +5,25 @@
     <link>https://Navarathri.github.io/blog/tags/</link>
     <description>Recent content in Tags on たくあんは食べ物。</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language><atom:link href="https://Navarathri.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja</language>
+    <lastBuildDate>Sat, 03 Oct 2020 15:54:05 +0900</lastBuildDate><atom:link href="https://Navarathri.github.io/blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git</title>
+      <link>https://Navarathri.github.io/blog/tags/git/</link>
+      <pubDate>Sat, 03 Oct 2020 15:54:05 +0900</pubDate>
+      
+      <guid>https://Navarathri.github.io/blog/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://Navarathri.github.io/blog/tags/hugo/</link>
+      <pubDate>Sat, 03 Oct 2020 15:54:05 +0900</pubDate>
+      
+      <guid>https://Navarathri.github.io/blog/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
