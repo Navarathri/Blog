@@ -2,9 +2,8 @@ baseURL = "https://Navarathri.github.io/blog"
 title = "たくあんは食べ物。"
 languageCode = "ja"
 theme = "hugo-theme-blueberry-detox"
-publishDir = "docs"
+publishDir = "source"
 
-# Enable comments by entering your Disqus shortname
 googleAnalytics = "UA-159240537-2"
 preserveTaxonomyNames = true
 paginate = 5 #frontpage pagination
