@@ -1,4 +1,4 @@
-baseURL = "https://Navarathri.github.io/blog"
+baseURL = "http://tayu-tayu.me"
 title = "たくあんは食べ物。"
 languageCode = "ja"
 theme = "hugo-theme-blueberry-detox"
