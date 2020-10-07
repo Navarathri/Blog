@@ -2,7 +2,7 @@ baseURL = "https://Navarathri.github.io/blog"
 title = "たくあんは食べ物。"
 languageCode = "ja"
 theme = "hugo-theme-blueberry-detox"
-publishDir = "source"
+publishDir = "Navarathri.github.io"
 
 googleAnalytics = "UA-159240537-2"
 preserveTaxonomyNames = true
