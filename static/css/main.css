@@ -266,7 +266,7 @@ h2 {
 h3 {
   font-size: 36px;
   font-size: 2rem;
-  margin-top: 1.5em;
+  margin-top: 0em;
   margin-bottom: 0.825em;
 }
 
@@ -764,6 +764,7 @@ hr {
   min-height: 15em;
   padding-top: 7em;
   margin-bottom: 8em;
+  width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -824,7 +825,7 @@ article.li {
   margin-bottom: 0px;
   text-align: left;
   vertical-align: middle;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 .post-footer {
