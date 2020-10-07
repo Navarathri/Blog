@@ -1,5 +1,6 @@
 <footer id="site-footer">
   <div class="container">
+    {{ partial "google_analytics.html" . }}
     {{ with .Site.Params.twitter_name }}
     <a href="https://www.twitter.com/{{ . }}" title="Twitter @tayutayu" target="_blank"><span class="tooltip"><i class="fa fa-twitter"></i></span></a>
     {{ end }}
