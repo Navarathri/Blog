@@ -10,7 +10,7 @@ paginate = 5 #frontpage pagination
 hasCJKLanguage = true
 
 [outputs]
-home = ["HTML", "RSS", "Algolia"]
+home = ["HTML", "RSS"]
 
 [params]
   author = "tayu_tayu"
@@ -28,12 +28,6 @@ home = ["HTML", "RSS", "Algolia"]
   page_view_conter = false
   leancloud_app_id = ""
   leancloud_app_key = ""
-
-  # algolia site search
-  algolia_search = true
-  algolia_appId = ""
-  algolia_indexName = ""
-  algolia_apiKey = ""
 
   featured_tags = true
   featured_condition_size = 1
