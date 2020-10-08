@@ -1,5 +1,5 @@
 baseURL = "https://www.tayu-tayu.me"
-title = "たくあんは食べ物。"
+title = "tayu-tayu.me"
 languageCode = "ja"
 theme = "hugo-theme-blueberry-detox"
 publishDir = "docs"
@@ -14,10 +14,9 @@ home = ["HTML", "RSS"]
 
 [params]
   author = "tayu_tayu"
-  SEOTitle = "たくあんは食べ物。 | tayu_tayu Blog"
-  description = "@tayu_tayu"
+  SEOTitle = "tayu-tayu.me"
+  description = "@tayu_tayu Blog"
   keyword = "tayu_tayu, Navarathri, travel"
-  slogan = ""
   twitter_name = "tayu_tayu"
 
   image_404 = "img/404-bg.jpg"

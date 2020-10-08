@@ -82,10 +82,7 @@ a:active, a:hover {
   outline: 0;
 }
 
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+h1 {}
 
 abbr[title] {
   border-bottom: 1px dotted;
@@ -283,6 +280,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
   font-size: 60px;
   font-size: 3.33333rem;
   margin-bottom: 0.495em;
@@ -442,7 +441,7 @@ cite {
 }
 
 .container {
-  width: 60%;
+  width: 100%;
   max-width: 800px;
   margin: auto;
 }
@@ -739,28 +738,25 @@ hr {
 }
 
 #site-header {
-  text-align: center;
-  min-height: 15em;
-  padding-top: 7em;
-  margin-bottom: 8em;
-  width: 100%;
+  /* text-align: center; */
+  /* min-height: 15em; */
+  /* padding-top: 5em; */
+  margin-bottom: 5em;
+  /* width: 100%; */
 }
 
 @media (max-width: 800px) {
   #site-header {
-    padding-top: 4em !important;
-    margin-bottom: 4em !important;
+    padding-top: 1em !important;
+    margin-bottom: 3em !important;
   }
 }
 
 .blog-title {
   text-transform: uppercase;
-  letter-spacing: 0.5rem;
-  font-size: 5rem;
 }
 
 .blog-description {
-  /* text-transform: uppercase; */
   letter-spacing: 4px;
   color: #b3b3b3;
   font-size: 50%;
