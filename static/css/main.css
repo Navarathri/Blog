@@ -82,8 +82,6 @@ a:active, a:hover {
   outline: 0;
 }
 
-h1 {}
-
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -275,7 +273,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: sans-serif;
   font-weight: 700;
   line-height: 1;
-  margin-top: 0;
   text-rendering: optimizeLegibility;
 }
 
@@ -443,7 +440,7 @@ cite {
 .container {
   width: 100%;
   max-width: 800px;
-  margin: auto;
+  margin: 1rem;
 }
 
 .nav {
@@ -757,9 +754,11 @@ hr {
 }
 
 .blog-description {
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   color: #b3b3b3;
-  font-size: 50%;
+  /* font-size: 50%; */
+  font-size: 8px;
+  font-size: 0.5rem;
 }
 
 #blog-logo img {
