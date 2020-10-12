@@ -157,6 +157,7 @@ a.header-title {
 p.header-title {
   font-family: var(--site-title-font), sans-serif;
   font-size: 5rem;
+  margin: auto;
 }
 
 .post-header {
