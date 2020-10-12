@@ -4,12 +4,8 @@ languageCode = "ja"
 publishDir = "docs"
 
 googleAnalytics = "UA-159240537-2"
-preserveTaxonomyNames = true
-paginate = 5 #frontpage pagination
-hasCJKLanguage = true
-
-[outputs]
-home = ["HTML", "RSS"]
+preserveTaxonomyNam5es = true
+paginate = 5
 
 [params]
   author = "tayu_tayu"
