@@ -198,6 +198,12 @@ p.header-title {
   margin: auto;
 }
 
+@media (max-width:900px) {
+  p.header-title {
+    font-size: 3rem;
+  }
+}
+
 .post-time {
   text-align: left;
   margin: 0px;
