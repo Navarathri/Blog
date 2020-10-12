@@ -1,7 +1,6 @@
 baseURL = "https://www.tayu-tayu.me"
-title = "tayu-tayu.me"
+title = "TAYU-TAYU.ME"
 languageCode = "ja"
-theme = "hugo-theme-blueberry-detox"
 publishDir = "docs"
 
 googleAnalytics = "UA-159240537-2"
