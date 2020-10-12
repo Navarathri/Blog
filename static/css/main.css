@@ -59,11 +59,18 @@ section#first-section {
 ----------------------------*/
 
 img {
-  border: 0;
+  /* border: 0; */
 }
 
 figure {
   margin: 0;
+}
+
+figcaption {
+  color: var(--color-light);
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0.25rem 0 2rem;
 }
 
 a {
