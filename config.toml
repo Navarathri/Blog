@@ -14,8 +14,7 @@ home = ["HTML", "RSS"]
 [params]
   author = "tayu_tayu"
   SEOTitle = "tayu-tayu.me"
-  description = "@tayu_tayu Blog"
-  keyword = "tayu_tayu, Navarathri, travel"
+  description = ""
   twitter_name = "tayu_tayu"
 
   image_404 = "img/404-bg.jpg"
@@ -29,27 +28,6 @@ home = ["HTML", "RSS"]
 
   featured_tags = true
   featured_condition_size = 1
-
-
-  # Include any custom CSS and/or JS files, url or relative to /static folder
-  #custom_css = ["css/lightbox.css", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css", "css/main.css"]
-  #custom_js = ["js/lightbox.js", "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", "js/main.js"]
-
-  [params.social]
-  rss            = false
-  email          = "youremail@gmail.com"
-  #twitter       = "full profile url in twitter"
-  # github         = ""
-
-[outputFormats.Algolia]
-baseName = "algolia"
-isPlainText = true
-mediaType = "application/json"
-notAlternative = true
-
-[params.algolia]
-vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
-params = ["categories", "tags"]
 
 [markup]
   [markup.tableOfContents]

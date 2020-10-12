@@ -337,7 +337,6 @@ h4 {
 }
 
 h5 {
-  font-size: 21px;
   font-size: 1.16667rem;
   margin-top: 1.5em;
   margin-bottom: 1em;
@@ -791,19 +790,13 @@ article.li {
 }
 
 .post-time {
-  text-transform: uppercase;
   text-align: left;
-  letter-spacing: 4px;
-  margin-bottom: 0px;
-  font-size: 75%;
-  vertical-align: middle;
+  margin: 0px;
 }
 
 .post-title {
-  margin-bottom: 0px;
+  margin: 0px;
   text-align: left;
-  vertical-align: middle;
-  letter-spacing: 2px;
 }
 
 .post-footer {

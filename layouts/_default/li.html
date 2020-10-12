@@ -2,18 +2,18 @@
     <header class="post-header">
         <!-- 記事投稿日 -->
         <p class="post-time">
-            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006.01.02" }}</time>
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006年01月02日" }}</time>
         </p>
         <!-- 記事タイトル -->
-        <h3 class="post-title">
+        <h5 class="post-title">
             <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </h3>
+        </h5>
     </header>
     <footer class="post-footer">
         <span>
-            {{ with.Params.tags }}
+            <!-- {{ with.Params.tags }}
             {{ delimit  . ", "}}
-            {{ end }}
+            {{ end }} -->
         </span>
     </footer>
 </article>
