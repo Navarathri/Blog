@@ -2,7 +2,7 @@
 :root {
   --bg-color: #F9F9F9;
   --main-text-color: #333333;
-  --sub-text-color: #000000;
+  --sub-text-color: #888888;
   --site-title-font: 'Abel', sans-serif;
   --site-text-font: sans-serif;
 }
@@ -25,7 +25,7 @@ body {
   color: var(--main-text-color);
   margin: 0 auto;
   padding: 2rem 1rem 4rem;
-  max-width: 36rem;
+  max-width: 39rem;
   word-wrap: break-word;
 }
 
@@ -39,7 +39,7 @@ body {
 }
 
 section {
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 section#first-section {
@@ -165,7 +165,7 @@ a.header-title {
 p.header-title {
   font-family: var(--site-title-font), sans-serif;
   font-size: 5rem;
-  margin-bottom: auto;
+  margin: auto;
 }
 
 .post-header {
@@ -191,6 +191,7 @@ p.header-title {
 
 .pagination {
   color: var(--sub-text-color);
+  font-size: 0.8rem;
   text-align: left;
   margin-top: 1.75rem;
 }
