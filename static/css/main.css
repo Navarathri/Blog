@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
 :root {
-  --bg-color: #FFFFFF;
-  --main-text-color: #222222;
-  --sub-text-color: #9F9F9F;
+  --bg-color: #f0f0f0;
+  --main-text-color: #0c0c0c;
+  --sub-text-color: #000000;
 }
 
 html {
@@ -26,6 +27,10 @@ body {
   word-wrap: break-word;
 }
 
+#index-article {
+  margin-top: 2rem;
+}
+
 #top-post-time {
   color: var(--color-light);
   display: block;
@@ -38,6 +43,18 @@ img {
 
 figure {
   margin: 0;
+}
+
+a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  line-height: inherit;
+  outline: 0;
+  transition: color .1s ease-out;
+  transition-property: color;
+  transition-duration: .1s;
+  transition-timing-function: ease-out;
+  transition-delay: initial
 }
 
 table {
@@ -131,6 +148,11 @@ pre code {
   white-space: pre-wrap;
   background-color: transparent;
   border-radius: 0;
+}
+
+.header-title {
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 3rem;
 }
 
 .post-header {
