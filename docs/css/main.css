@@ -38,6 +38,14 @@ body {
   font-size: 0.8rem;
 }
 
+section {
+  margin-top: 3rem;
+}
+
+section#first-section {
+  margin-top: 0;
+}
+
 img {
   border: 0;
 }
@@ -157,7 +165,7 @@ a.header-title {
 p.header-title {
   font-family: var(--site-title-font), sans-serif;
   font-size: 5rem;
-  margin: auto;
+  margin-bottom: auto;
 }
 
 .post-header {
@@ -182,8 +190,9 @@ p.header-title {
 }
 
 .pagination {
-  text-align: center;
   color: var(--sub-text-color);
+  text-align: left;
+  margin-top: 1.75rem;
 }
 
 @media (max-width: 800px) {
