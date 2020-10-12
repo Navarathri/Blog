@@ -2,12 +2,12 @@
     <header class="post-header">
         <h2 class="p-post-title">{{ .Title }}</h2>
     </header>
-    <div class="page-toc">
+    <!-- <div class="page-toc">
         {{ if gt (len .TableOfContents) 33 }}
         <h4>目次</h4>
         {{ .TableOfContents }}
         {{ end }}
-    </div>
+    </div> -->
     <section class="post-content">
         {{ .Content }}
     </section>
