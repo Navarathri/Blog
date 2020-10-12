@@ -33,6 +33,47 @@ body {
   word-wrap: break-word;
 }
 
+a {
+  color: var(--main-text-color);
+  line-height: inherit;
+  outline: 0;
+  transition: color .1s ease-out;
+  transition-property: color;
+  transition-duration: .1s;
+  transition-timing-function: ease-out;
+  transition-delay: initial
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+figure img {
+  margin-bottom: 0;
+}
+
+img {
+  backface-visibility: hidden;
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  color: var(--color-light);
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 0.25rem 0 2rem;
+}
+
 /*----------------------------
     Top Page
 ----------------------------*/
@@ -58,38 +99,8 @@ section#first-section {
     Post Page
 ----------------------------*/
 
-img {
-  /* border: 0; */
-}
-
-figure {
-  margin: 0;
-}
-
-figcaption {
-  color: var(--color-light);
-  font-size: 0.8rem;
-  text-align: center;
-  margin: 0.25rem 0 2rem;
-}
-
-a {
-  color: var(--main-text-color);
-  line-height: inherit;
-  outline: 0;
-  transition: color .1s ease-out;
-  transition-property: color;
-  transition-duration: .1s;
-  transition-timing-function: ease-out;
-  transition-delay: initial
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 100%;
-  margin-top: 2em;
-  margin-bottom: 2em;
+.post-header {
+  text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -187,10 +198,6 @@ p.header-title {
   margin: auto;
 }
 
-.post-header {
-  text-align: center;
-}
-
 .post-time {
   text-align: left;
   margin: 0px;
@@ -232,10 +239,6 @@ p.header-title {
   border-bottom: 1px solid;
 }
 
-.p-post-title {
-  margin-bottom: 50px;
-}
-
 .f-1:before, .f-1:after {
   content: "";
   display: table;
@@ -247,31 +250,6 @@ p.header-title {
 
 .author {
   float: left;
-}
-
-@media (max-width: 900px) {
-  .author {
-    float: none !important;
-  }
-}
-
-@media (max-width: 900px) {
-  .author {
-    float: none !important;
-  }
-  .f-post-time {
-    float: inherit !important;
-  }
-}
-
-.f-post-time {
-  float: right;
-}
-
-@media (max-width: 900px) {
-  .f-post-time {
-    float: none !important;
-  }
 }
 
 .f-2 {
