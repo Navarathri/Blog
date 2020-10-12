@@ -3,38 +3,15 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.tayu-tayu.me/tags/blog/</loc>
-    <lastmod>2020-10-12T10:40:26+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.tayu-tayu.me/categories/blog/</loc>
-    <lastmod>2020-10-12T10:40:26+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.tayu-tayu.me/categories/</loc>
-    <lastmod>2020-10-12T10:40:26+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.tayu-tayu.me/post/</loc>
-    <lastmod>2020-10-12T10:40:26+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.tayu-tayu.me/tags/</loc>
-    <lastmod>2020-10-12T10:40:26+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.tayu-tayu.me/</loc>
-    <lastmod>2020-10-12T10:40:26+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.tayu-tayu.me/post/2020-10-12-build-parsonal-blog/</loc>
-    <lastmod>2020-10-12T10:40:26+09:00</lastmod>
   </url>
   
 </urlset>
