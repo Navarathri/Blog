@@ -1,3 +1,7 @@
+/*----------------------------
+    General
+----------------------------*/
+
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 :root {
   --bg-color: #F9F9F9;
@@ -29,6 +33,18 @@ body {
   word-wrap: break-word;
 }
 
+/*----------------------------
+    Top Page
+----------------------------*/
+
+section {
+  margin-top: 4rem;
+}
+
+section#first-section {
+  margin-top: 0;
+}
+
 #index-article {
   margin-top: 2rem;
 }
@@ -38,13 +54,9 @@ body {
   font-size: 0.8rem;
 }
 
-section {
-  margin-top: 4rem;
-}
-
-section#first-section {
-  margin-top: 0;
-}
+/*----------------------------
+    Post Page
+----------------------------*/
 
 img {
   border: 0;
