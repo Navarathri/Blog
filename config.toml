@@ -13,7 +13,7 @@ paginate = 5
   description = ""
   twitter_name = "tayu_tayu"
 
-  og_image = "/thumbnails/default.png"
+  og_image = "images//thumbnails/default.png"
 
   image_404 = "img/404-bg.jpg"
   title_404 = "ページが見つかりません。 :("
