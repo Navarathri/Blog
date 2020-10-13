@@ -8,7 +8,7 @@ Authors: "tayu_tayu"
 toc: false
 autoCollapseToc: false
 math: true
-meta_image: "/images/●●●●●-01.jpg"
+meta_image: "/images/2020-10-13-travel-kagawa-01-01.jpg"
 page_description: "先日、３泊４日で香川旅行に行ってきたので、色々忘れないうちにメモに残す。"
 ---
 
