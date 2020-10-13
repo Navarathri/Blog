@@ -12,6 +12,8 @@ meta_image: "/images/2020-10-13-travel-kagawa-01-01.jpg"
 page_description: "先日、３泊４日で香川旅行に行ってきたので、色々忘れないうちにメモに残す。"
 ---
 
+{{< img link="/images/2020-10-13-travel-kagawa-01-01.jpg" src="/images/2020-10-13-travel-kagawa-01-01.jpg" title="サンライズ瀬戸" >}}
+
 ### 旅の目的
 
 寝台特急 サンライズ出雲・瀬戸に乗るための旅行。Twitterでバズっていたある方の旅行ツイートがきっかけ。  
