@@ -10,7 +10,7 @@ autoCollapseToc: false
 math: true
 ---
 
-香川旅行をしているときに思いついて、勢いで個人ブログを作った。
+香川旅行をしているときに思い立って、勢いで個人ブログを作った。
 
 {{< img link="/images/2020-10-04-build-personal-blog-01.jpg" src="/images/2020-10-04-build-personal-blog-01.jpg" title="トップページ" >}}
 
