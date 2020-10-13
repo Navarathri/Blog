@@ -77,7 +77,7 @@ figure {
 
 figcaption {
   color: var(--color-light);
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   text-align: center;
   margin: 0.25rem 0 2rem;
 }
@@ -175,7 +175,7 @@ pre code {
 }
 
 /*----------------------------
-    Header
+    Site-Title
 ----------------------------*/
 
 #header-site-title a {
