@@ -5,9 +5,11 @@
     </header>
     <div id="page_description">{{ .Params.page_description }}</div>
     <div class="page-toc">
+        {{ if .Params.toc }}
         {{ if gt (len .TableOfContents) 33 }}
         <h3>目次</h3>
         {{ .TableOfContents }}
+        {{ end }}
         {{ end }}
     </div>
     <section class="post-content">
