@@ -1,5 +1,5 @@
 ---
-title: "2020年9月　香川旅行（一人旅、３泊４日）"
+title: "三泊四日の香川旅行をした"
 date: 2020-10-13T22:01:41+09:00
 draft: false
 categories: ["travel"]
@@ -9,14 +9,14 @@ toc: false
 autoCollapseToc: false
 math: true
 meta_image: "/images/2020-10-13-travel-kagawa-01-01.jpg"
-page_description: "先日、３泊４日で香川旅行に行ってきたので、色々忘れないうちにメモに残す。"
+page_description: "先日、３泊４日の香川旅行をしたので、色々忘れないうちにメモに残す。"
 ---
 
 {{< img link="/images/2020-10-13-travel-kagawa-01-01.jpg" src="/images/2020-10-13-travel-kagawa-01-01.jpg" title="サンライズ瀬戸" >}}
 
 ### 旅の目的
 
-寝台特急 サンライズ出雲・瀬戸に乗るための旅行。Twitterでバズっていたある方の旅行ツイートがきっかけ。  
+旅の目的は、寝台特急 サンライズ出雲・瀬戸に乗るため。Twitterでバズっていたある方の旅行ツイートがきっかけ。  
 出雲(島根県)は旅行経験があったため、今回は「サンライズ瀬戸」に乗車。目的地が異なるだけで、車両自体に大きな違いはない。
 
 ### 旅のスケジュール
