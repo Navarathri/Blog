@@ -6,7 +6,7 @@
   {{ partial "header.html" . }}
   <main class="content" role="main">
     <section id="first-section">
-      <h3>投稿一覧</h3>
+      <h4>投稿一覧</h4>
       {{ range .Paginator.Pages }}
       {{ .Render "li" }}
       {{ end }}
