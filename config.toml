@@ -10,7 +10,7 @@ paginate = 5
 [params]
   author = "tayu_tayu"
   SEOTitle = "tayu-tayu.me"
-  description = ""
+  description = "日々の備忘録、雑記をまとめたサイトです。"
   twitter_name = "tayu_tayu"
 
   og_image = "images//thumbnails/default.png"
