@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.tayu-tayu.me/post/2020-10-13-travel-kagawa-01/</loc>
-    <lastmod>2020-10-13T22:01:41+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://www.tayu-tayu.me/categories/</loc>
     <lastmod>2020-10-13T22:01:41+09:00</lastmod>
   </url>
@@ -44,6 +39,11 @@
   
   <url>
     <loc>https://www.tayu-tayu.me/categories/travel/</loc>
+    <lastmod>2020-10-13T22:01:41+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.tayu-tayu.me/post/2020-10-13-travel-kagawa-01/</loc>
     <lastmod>2020-10-13T22:01:41+09:00</lastmod>
   </url>
   
