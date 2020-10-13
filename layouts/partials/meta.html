@@ -2,14 +2,11 @@
 <meta name="viewport" content="width=device-width">
 <meta name="description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
 
-
-
 <meta name="author" content="{{ .Site.Params.author }}">
+
 {{ with .Site.Params.twitter_name }}
-<meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@https://twitter.com/{{ . }}">
-<meta name="twitter:creator" content="@https://twitter.com/{{ . }}">
-<meta name="twitter:domain" content="{{ $.Site.BaseURL }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@{{ . }}">
 {{ end }}
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:title" content="{{ .Site.Title }}">
