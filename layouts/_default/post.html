@@ -3,12 +3,12 @@
         <p><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006年01月02日" }}</time></p>
         <h3>{{ .Title }}</h3>
     </header>
-    <!-- <div class="page-toc">
+    <div class="page-toc">
         {{ if gt (len .TableOfContents) 33 }}
-        <h4>目次</h4>
+        <h3>目次</h3>
         {{ .TableOfContents }}
         {{ end }}
-    </div> -->
+    </div>
     <section class="post-content">
         {{ .Content }}
     </section>
