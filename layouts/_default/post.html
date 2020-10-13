@@ -1,8 +1,9 @@
 <article class="{{ .Type }}">
     <header class="post-header">
         <p><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2006年01月02日" }}</time></p>
-        <h3>{{ .Title }}</h3>
+        <h2>{{ .Title }}</h2>
     </header>
+    <div id="page_description">{{ .Params.page_description }}</div>
     <div class="page-toc">
         {{ if gt (len .TableOfContents) 33 }}
         <h3>目次</h3>
@@ -10,7 +11,6 @@
         {{ end }}
     </div>
     <section class="post-content">
-        {{ .Params.page_description }}
         {{ .Content }}
     </section>
     <footer class="post-footer">
