@@ -13,7 +13,7 @@ meta_image: "/images/2020-10-12-build-personal-blog-01.jpg"
 
 香川旅行をしているときに思い立って、勢いで個人ブログを作った。
 
-{{< img link="/images/2020-10-04-build-personal-blog-01.jpg" src="/images/2020-10-04-build-personal-blog-01.jpg" title="トップページ" >}}
+{{< img link="/images/2020-10-12-build-personal-blog-01.jpg" src="/images/2020-10-12-build-personal-blog-01.jpg" title="トップページ" >}}
 
 ブログサービスを利用しても良かったが、勉強のため個人ブログにした。  
 GitHubでソース管理し、Netlifyでホスティングしている。  
