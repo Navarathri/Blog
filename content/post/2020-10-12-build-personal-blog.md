@@ -8,7 +8,7 @@ Authors: "tayu_tayu"
 toc: false
 autoCollapseToc: false
 math: true
-meta_image: "/images/2020-10-12-build-personal-blog-main.png"
+meta_image: "/images/2020-10-12-build-personal-blog-main.jpg"
 ---
 
 香川旅行をしているときに思い立って、勢いで個人ブログを作った。
