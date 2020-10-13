@@ -14,7 +14,7 @@
       
       <guid>https://www.tayu-tayu.me/post/2020-10-12-build-personal-blog/</guid>
       <description>香川旅行をしているときに思い立って、勢いで個人ブログを作った。
-トップページブログサービスを利用しても良かったが、ウェブサイト構築の勉強のため個人ブログにした。
+トップページブログサービスを利用しても良かったが、勉強のため個人ブログにした。
 GitHubでソース管理し、Netlifyでホスティングしている。
 ドメインはRoute53で購入し、年額17$＋α。</description>
     </item>
