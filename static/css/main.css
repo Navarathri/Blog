@@ -15,7 +15,7 @@ html {
   font-family: var(--site-text-font);
   transform: rotate(0.03deg);
   font-size: 62.5%;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 @media screen and (max-width: 900px) {
@@ -32,7 +32,7 @@ body {
   padding: 1rem 1rem 4rem;
   max-width: 60rem;
   word-wrap: break-word;
-  letter-spacing: -.00278rem;
+  letter-spacing: -.00277rem;
   -webkit-font-smoothing: antialiased;
 }
 
