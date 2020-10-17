@@ -13,9 +13,9 @@
 
 html {
   font-family: var(--site-text-font);
-  transform: rotate(0.03deg);
+  /* transform: rotate(0.03deg); */
   font-size: 62.5%;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 @media screen and (max-width: 900px) {
@@ -30,9 +30,9 @@ body {
   font-size: 1.6rem;
   margin: 1rem auto;
   padding: 1rem 1rem 4rem;
-  max-width: 60rem;
+  max-width: 50rem;
   word-wrap: break-word;
-  letter-spacing: -.00278rem;
+  letter-spacing: -.01rem;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -317,9 +317,6 @@ pre code {
 }
 
 .page-toc {
-  /* margin: 1.5em;
-  margin-bottom: 3em;
-  padding: 1.5em; */
   width: auto;
-  /* border: 1px solid #ddd; */
+  margin: 5rem auto;
 }
