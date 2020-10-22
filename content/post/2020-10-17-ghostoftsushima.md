@@ -8,7 +8,6 @@ Authors: "tayu_tayu"
 toc: false
 autoCollapseToc: false
 math: true
-meta_image: "/images/●●●●●-01.jpg"
 page_description: "ゴーストオブツシマの大型アップデート（バージョン1.1）が配信されたので、遊んでみた。"
 ---
 

@@ -8,7 +8,7 @@ Authors: "tayu_tayu"
 toc: false
 autoCollapseToc: false
 math: true
-meta_image: "/images/●●●●●-01.jpg"
+meta_image: "/images/●●●●●-01.jpg" # 消すとサイトのカードイメージが使われる
 page_description: "aaaaaaaa"
 ---
 
