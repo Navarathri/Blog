@@ -6,7 +6,21 @@
     <description>Recent content in Anime on TAYU-TAYU.ME</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 22 Oct 2020 22:05:16 +0900</lastBuildDate><atom:link href="https://www.tayu-tayu.me/categories/anime/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Oct 2020 23:10:14 +0900</lastBuildDate><atom:link href="https://www.tayu-tayu.me/categories/anime/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>アニメ視聴履歴記録方法（2020年版）</title>
+      <link>https://www.tayu-tayu.me/post/2020-10-23-anime2020/</link>
+      <pubDate>Fri, 23 Oct 2020 23:10:14 +0900</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/post/2020-10-23-anime2020/</guid>
+      <description>アニメを趣味にしてから丸11年が経過した。
+使用するツールは以下。 ・Googleカレンダー ・OneNote
+前提として、サービス終了の可能性があるウェブツールは使用しないようにしている。 以下、それぞれのツールの使用方法。
+Googleカレンダー 日ごとの視聴履歴を記録。 その日に「どの作品の」「何話を」観たのかを、下図の様に入力している。
+Googleカレンダーのメリット 何話まで見たか検索可能 拡張性（ホームスピーカー、IFTTT）
+OneNote 作品ごとの視聴期間を記録。</description>
+    </item>
+    
     <item>
       <title>アニメ「ハイキュー!!」を観た</title>
       <link>https://www.tayu-tayu.me/post/2020-10-22-haikyu/</link>
