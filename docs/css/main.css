@@ -7,13 +7,12 @@
   --bg-color: #F9F9F9;
   --main-text-color: #333333;
   --sub-text-color: #888888;
-  --site-title-font: 'Abel', sans-serif;
-  --site-text-font: sans-serif;
+  --font-base: sans-serif;
+  --font-title: 'Abel', sans-serif;
 }
 
 html {
-  font-family: var(--site-text-font);
-  /* transform: rotate(0.03deg); */
+  font-family: var(--font-base);
   font-size: 62.5%;
   line-height: 1.8;
 }
@@ -32,7 +31,6 @@ body {
   padding: 1rem 1rem 4rem;
   max-width: 50rem;
   word-wrap: break-word;
-  letter-spacing: -.01rem;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -153,11 +151,14 @@ code, kbd, pre, samp {
 }
 
 code {
-  padding: 2px 4px;
+  color: #fff;
+  font-family: monospace;
+  display: block;
+  padding: 1.2rem;
+  margin: 0;
   max-width: 100%;
   font-size: 90%;
-  color: inherit;
-  background-color: transparent;
+  background: #2c2d3a;
   white-space: nowrap;
   border-radius: 5px;
 }
@@ -165,9 +166,9 @@ code {
 pre {
   display: block;
   padding: 10px;
-  margin: 2.5em 0;
+  margin: 1em 0 2em;
   max-width: 100%;
-  font-size: 75%;
+  font-size: 85%;
   line-height: 1.65;
   word-break: break-all;
   word-wrap: break-word;
@@ -197,7 +198,7 @@ pre code {
 }
 
 #header-site-title p {
-  font-family: var(--site-title-font), sans-serif;
+  font-family: var(--font-title), sans-serif;
   font-size: 7.7rem;
   margin-top: 5rem;
   line-height: 1;
