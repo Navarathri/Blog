@@ -153,11 +153,14 @@ code, kbd, pre, samp {
 }
 
 code {
-  padding: 2px 4px;
+  color: #fff;
+  font-family: monospace;
+  display: block;
+  padding: 1.2rem;
+  margin: 0;
   max-width: 100%;
   font-size: 90%;
-  color: inherit;
-  background-color: transparent;
+  background: #2c2d3a;
   white-space: nowrap;
   border-radius: 5px;
 }
