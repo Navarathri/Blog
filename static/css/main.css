@@ -166,9 +166,9 @@ code {
 pre {
   display: block;
   padding: 10px;
-  margin: 2.5em 0;
+  margin: 1em 0 2em;
   max-width: 100%;
-  font-size: 75%;
+  font-size: 85%;
   line-height: 1.65;
   word-break: break-all;
   word-wrap: break-word;
