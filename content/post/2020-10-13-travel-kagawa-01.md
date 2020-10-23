@@ -1,7 +1,7 @@
 ---
 title: "3泊4日の香川旅行をした"
 date: 2020-10-13T22:01:41+09:00
-draft: false
+draft: true
 categories: ["travel"]
 tags: ["kagawa", "travel", "dialy"]
 Authors: "tayu_tayu"
