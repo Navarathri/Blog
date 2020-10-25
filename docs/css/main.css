@@ -26,10 +26,10 @@ html {
 body {
   background-color: var(--bg-color) !important;
   color: var(--main-text-color);
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   margin: 1rem auto;
   padding: 1rem 1rem 4rem;
-  max-width: 50rem;
+  max-width: 70rem;
   word-wrap: break-word;
   -webkit-font-smoothing: antialiased;
 }
@@ -141,9 +141,17 @@ section#first-section {
   text-align: left;
 }
 
-div#page_description {
-  margin-top: 2rem;
-  margin-bottom: 5rem;
+.post-header p {
+  margin-bottom: 0;
+}
+
+.post-header h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+#page_description {
+  margin: 2rem 0;
 }
 
 code, kbd, pre, samp {
@@ -199,7 +207,7 @@ pre code {
 
 #header-site-title p {
   font-family: var(--font-title), sans-serif;
-  font-size: 7.7rem;
+  font-size: 9rem;
   margin-top: 5rem;
   line-height: 1;
 }
