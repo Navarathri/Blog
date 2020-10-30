@@ -8,6 +8,7 @@
   --color-main-text: #222;
   --color-sub-text: #555;
   --font-base: "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "Meiryo", "メイリオ", "MS Pゴシック", Arial, Helvetica, Verdana, sans-serif;
+  /* --font-base: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif; */
   --font-title: 'Abel', sans-serif;
 }
 
@@ -50,6 +51,13 @@ a {
   transition-duration: .1s;
   transition-timing-function: ease-out;
   transition-delay: initial
+}
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1.5em;
+  list-style-position: inside;
+  padding-inline-start: 4rem;
 }
 
 table {
@@ -119,8 +127,18 @@ h5, h6 {
     Top Page
 ----------------------------*/
 
-section#first-section {
+#first-section {
   margin-top: 0;
+}
+
+#first-section div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#second-section dt {
+  padding-inline-start: 4rem;
 }
 
 #top-section-name {
@@ -135,16 +153,6 @@ section#first-section {
 #top-post-time {
   font-size: 1.2rem;
   margin-right: 1.315rem;
-}
-
-#first-section div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-#index-article li {
-  /* display: inline; */
 }
 
 /*----------------------------
