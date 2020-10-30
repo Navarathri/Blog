@@ -6,7 +6,14 @@
   {{ partial "header.html" . }}
   <main class="content" role="main">
     <section id="first-section">
-      <h4>投稿一覧</h4>
+      <h5 id="top-section-name">RECENT POSTS</h5>
+      {{ range .Paginator.Pages }}
+      {{ .Render "li" }}
+      {{ end }}
+      {{ partial "pagination.html" . }}
+    </section>
+    <section id="second-section">
+      <h5 id="top-section-name">ABOUT ME</h5>
       {{ range .Paginator.Pages }}
       {{ .Render "li" }}
       {{ end }}
