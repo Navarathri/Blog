@@ -2,11 +2,11 @@
     General
 ----------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kosugi&family=Abel&display=swap');
 :root {
-  --bg-color: #F9F9F9;
-  --main-text-color: #333333;
-  --sub-text-color: #888888;
+  --color-background: #F1F1F1;
+  --color-main-text: #222;
+  --color-sub-text: #555;
   --font-base: sans-serif;
   --font-title: 'Abel', sans-serif;
 }
@@ -24,8 +24,8 @@ html {
 }
 
 body {
-  background-color: var(--bg-color) !important;
-  color: var(--main-text-color);
+  background-color: var(--color-background) !important;
+  color: var(--color-main-text);
   font-size: 1.8rem;
   margin: 1rem auto;
   padding: 1rem 1rem 4rem;
@@ -42,7 +42,7 @@ body {
 }
 
 a {
-  color: var(--main-text-color);
+  color: var(--color-main-text);
   line-height: inherit;
   outline: 0;
   transition: color .1s ease-out;
@@ -236,7 +236,7 @@ pre code {
 }
 
 .pagination {
-  color: var(--sub-text-color);
+  color: var(--color-sub-text);
   font-size: 0.8rem;
   text-align: left;
   margin-top: 1.75rem;
