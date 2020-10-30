@@ -14,10 +14,6 @@
     </section>
     <section id="second-section">
       <h5 id="top-section-name">ABOUT ME</h5>
-      {{ range .Paginator.Pages }}
-      {{ .Render "li" }}
-      {{ end }}
-      {{ partial "pagination.html" . }}
     </section>
   </main>
   {{ partial "footer.html" . }}
