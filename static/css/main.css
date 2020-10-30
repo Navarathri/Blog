@@ -132,9 +132,10 @@ section#first-section {
   margin-top: 2rem;
 }
 
-#top-post-time {
-  display: block;
-  font-size: 1.3rem;
+#top-post-time {}
+
+#index-article li {
+  display: inline;
 }
 
 /*----------------------------
