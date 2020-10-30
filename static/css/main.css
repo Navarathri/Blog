@@ -132,10 +132,19 @@ section#first-section {
   margin-top: 2rem;
 }
 
-#top-post-time {}
+#top-post-time {
+  font-size: 1.2rem;
+  margin-right: 1.315rem;
+}
+
+#first-section div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 #index-article li {
-  display: inline;
+  /* display: inline; */
 }
 
 /*----------------------------
