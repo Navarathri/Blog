@@ -7,10 +7,12 @@
   <main class="content" role="main">
     <section id="first-section">
       <h5 id="top-section-name">RECENT POSTS</h5>
-      {{ range first 5 .Paginator.Pages}}
-      {{ .Render "li" }}
-      {{ end }}
-      {{ partial "pagination.html" . }}
+      <ul>
+        {{ range first 5 .Paginator.Pages}}
+        {{ .Render "li" }}
+        {{ end }}
+        {{ partial "pagination.html" . }}
+      </ul>
     </section>
     <section id="second-section">
       <h5 id="top-section-name">ABOUT ME</h5>
