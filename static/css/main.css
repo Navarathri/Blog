@@ -2,12 +2,13 @@
     General
 ----------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Kosugi&family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 :root {
   --color-background: #F1F1F1;
   --color-main-text: #222;
   --color-sub-text: #555;
-  --font-base: sans-serif;
+  --font-base: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  ;
   --font-title: 'Abel', sans-serif;
 }
 
