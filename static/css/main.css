@@ -125,6 +125,7 @@ section#first-section {
 
 #top-section-name {
   font-family: 'Abel', sans-serif;
+  letter-spacing: 0.25rem;
 }
 
 #index-article {
@@ -211,6 +212,7 @@ pre code {
 #header-site-title p {
   font-family: var(--font-title);
   font-size: 9rem;
+  letter-spacing: 0.25rem;
   margin: 5rem 0;
   line-height: 1;
 }
