@@ -7,8 +7,7 @@
   --color-background: #F1F1F1;
   --color-main-text: #222;
   --color-sub-text: #555;
-  --font-base: "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "Meiryo", "メイリオ", "MS Pゴシック", Osaka, Arial, Helvetica, Verdana, sans-serif;
-  ;
+  --font-base: "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "Meiryo", "メイリオ", "MS Pゴシック", Arial, Helvetica, Verdana, sans-serif;
   --font-title: 'Abel', sans-serif;
 }
 
@@ -18,7 +17,7 @@ html {
   line-height: 1.8;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 556px) {
   html {
     font-size: 50%;
   }
@@ -35,7 +34,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1005px) {
   body {
     margin: 0rem auto;
     padding: 0rem 2.5rem 5rem;
@@ -57,7 +56,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
-  /* margin-top: 2em; */
   margin-bottom: 2em;
 }
 
@@ -123,6 +121,11 @@ h5, h6 {
 
 section#first-section {
   margin-top: 0;
+}
+
+#top-section-name {
+  font-family: 'Abel', sans-serif;
+  letter-spacing: 0.25rem;
 }
 
 #index-article {
@@ -207,15 +210,16 @@ pre code {
 }
 
 #header-site-title p {
-  font-family: var(--font-title), sans-serif;
+  font-family: var(--font-title);
   font-size: 9rem;
-  margin-top: 5rem;
+  letter-spacing: 0.25rem;
+  margin: 5rem 0;
   line-height: 1;
 }
 
 @media screen and (max-width:900px) {
   #header-site-title p {
-    margin: 2rem 0 7rem;
+    margin: 2rem 0;
   }
 }
 
