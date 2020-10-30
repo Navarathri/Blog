@@ -2,7 +2,7 @@
 title: "xxx"
 date: {{ .Date }}
 draft: true
-categories: [""]
+categories: ["blog"]
 tags: ["","",""]
 Authors: "tayu_tayu"
 toc: false

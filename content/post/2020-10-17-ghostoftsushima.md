@@ -1,9 +1,9 @@
 ---
-title: "ゴーストオブツシマ ver1.1"
+title: "ゴーストオブツシマ アップデート（ver1.1）"
 date: 2020-10-17T13:42:04+09:00
 draft: false
 categories: ["game"]
-tags: ["game","GhostOfTshushima"]
+tags: ["game","ghostoftshushima"]
 Authors: "tayu_tayu"
 toc: false
 autoCollapseToc: false
