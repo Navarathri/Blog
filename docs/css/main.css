@@ -7,7 +7,7 @@
   --color-background: #F1F1F1;
   --color-main-text: #222;
   --color-sub-text: #555;
-  --font-base: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+  --font-base: "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "Meiryo", "メイリオ", "MS Pゴシック", Osaka, Arial, Helvetica, Verdana, sans-serif;
   ;
   --font-title: 'Abel', sans-serif;
 }
