@@ -5,7 +5,7 @@ publishDir = "docs"
 
 googleAnalytics = "UA-159240537-2"
 preserveTaxonomyNam5es = true
-paginate = 5
+# paginate = 5
 
 [params]
   author = "tayu_tayu"
