@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Anime on TAYU-TAYU.ME</title>
+    <title>anime on TAYU-TAYU.ME</title>
     <link>https://www.tayu-tayu.me/tags/anime/</link>
-    <description>Recent content in Anime on TAYU-TAYU.ME</description>
+    <description>Recent content in anime on TAYU-TAYU.ME</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 23 Oct 2020 23:10:14 +0900</lastBuildDate><atom:link href="https://www.tayu-tayu.me/tags/anime/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>アニメ視聴履歴の記録方法（2020年版）</title>
+      <title>アニメ視聴履歴記録方法（2020年版）</title>
       <link>https://www.tayu-tayu.me/post/2020-10-23-anime2020/</link>
       <pubDate>Fri, 23 Oct 2020 23:10:14 +0900</pubDate>
       
@@ -28,6 +28,19 @@ Googleカレンダー 日ごとの視聴履歴を記録。
 大体その年の放送作品が並ぶため、社会人になったばかりの頃の飲み会では同期とのオタク昔話で重宝した。今は昔。
 　最後に、管理方法の変遷
  2009年：紙のカレンダーに手書き 2010年～2016年5月25日：Evernote 2016年5月26日～2017年3月20日：OneNote 2017年3月21日～現在：OneNote＋Googleカレンダー  　以上</description>
+    </item>
+    
+    <item>
+      <title>アニメ「ハイキュー!!」</title>
+      <link>https://www.tayu-tayu.me/post/2020-10-22-haikyu/</link>
+      <pubDate>Thu, 22 Oct 2020 22:05:16 +0900</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/post/2020-10-22-haikyu/</guid>
+      <description>1週間で最新話まで一気見した過去にリアルタイムで1期は観ていて原作も21巻あたりまでは読んでいたが、話をほとんど忘れていたので最初から見直した。
+細かい描写が丁寧なアニメで、自分がバレー経験者なのもあって感動しきりだった。
+特に感動したのは、音。スキール音(床とシューズが擦れる音)が当然のように漏れなく当てられているし、ボールがネットにかかる音もリアル。 また、大会を勝ち進んで会場が変わった際の設備の変わり具合も良い。大きな会場に行くと良い設備が増え、またホイッスル音も変わる。それがしっかり描写されていた。（複数面のコートで試合を行う場合はコート毎にホイッスルの音を変えるはずだが、その描写はなかった気がする。そもそも複数コートの試合を同時に描写していなかったからかもしれないが。）
+作画もとても良かった。アニメ制作会社は「Production I.G」。進撃の巨人などもこの会社。要所要所の得点シーンが最高。床にアクションカメラを置いたようなアングルがよく使われていた。「このシーン簡単じゃないよな～」というシーンが2話に1回くらいあった。
+まだ4期が放送中なので、続きが待ち遠しい。</description>
     </item>
     
   </channel>
