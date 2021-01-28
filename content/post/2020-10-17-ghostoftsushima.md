@@ -1,5 +1,5 @@
 ---
-title: "ゴーストオブツシマ アップデート（ver1.1）"
+title: "ゴーストオブツシマ"
 date: 2020-10-17T13:42:04+09:00
 draft: false
 categories: ["game"]

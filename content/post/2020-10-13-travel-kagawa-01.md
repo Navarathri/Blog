@@ -1,5 +1,5 @@
 ---
-title: "香川旅行（3泊4日 一人旅）"
+title: "香川"
 date: 2020-10-13T22:01:41+09:00
 draft: false
 categories: ["blog"]
