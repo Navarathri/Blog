@@ -1,7 +1,7 @@
 ---
 title: "香川旅行（3泊4日 一人旅）"
 date: 2020-10-13T22:01:41+09:00
-draft: true
+draft: false
 categories: ["blog"]
 tags: ["kagawa", "travel", "dialy"]
 Authors: "tayu_tayu"
