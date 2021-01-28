@@ -2,14 +2,12 @@
     General
 ----------------------------*/
 
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 :root {
   --color-background: #000000;
   --color-main-text: #DDDDDD;
   --color-sub-text: #555;
-  --font-base: "ヒラギノ角ゴPro W3", "Hiragino Kaku Gothic Pro", "Meiryo", "メイリオ", "MS Pゴシック", Arial, Helvetica, Verdana, sans-serif;
-  /* --font-base: "Segoe UI", Meiryo, system-ui, -apple-system, BlinkMacSystemFont, sans-serif; */
-  --font-title: 'Abel', sans-serif;
+  --font-base: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+  --font-title: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
 }
 
 html {
@@ -51,7 +49,7 @@ a {
   transition-property: color;
   transition-duration: .1s;
   transition-timing-function: ease-out;
-  transition-delay: initial
+  transition-delay: initial;
 }
 
 ul, ol {
@@ -143,7 +141,6 @@ h5, h6 {
 }
 
 #top-section-name {
-  font-family: 'Abel', sans-serif;
   letter-spacing: 0.25rem;
 }
 
@@ -230,8 +227,7 @@ pre code {
 
 #header-site-title p {
   font-family: var(--font-title);
-  font-size: 9rem;
-  letter-spacing: 0.25rem;
+  font-size: 2rem;
   margin: 5rem 0;
   line-height: 1;
 }
