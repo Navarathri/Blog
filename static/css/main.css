@@ -49,7 +49,7 @@ a {
   transition-property: color;
   transition-duration: .1s;
   transition-timing-function: ease-out;
-  transition-delay: initial
+  transition-delay: initial;
 }
 
 ul, ol {
