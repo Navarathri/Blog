@@ -8,7 +8,7 @@ Authors: "tayu_tayu"
 toc: true
 autoCollapseToc: false
 math: true
-meta_image: "/images/2020-10-13-travel-kagawa-01-01.jpg"
+meta_image: "https://i.imgur.com/KNhHKPa.jpg"
 page_description: "先日、３泊４日の香川旅行をしたので、色々忘れないうちにメモに残す。"
 ---
 
@@ -19,7 +19,7 @@ page_description: "先日、３泊４日の香川旅行をしたので、色々�
 出雲は今年１月に行ったので、今回は「サンライズ瀬戸」に乗車。  
 目的地が異なるだけで、車両自体に大きな違いはない。
 
-{{< img link="/images/2020-10-13-travel-kagawa-01-01.jpg" src="/images/2020-10-13-travel-kagawa-01-01.jpg" title="今回乗車したサンライズ瀬戸" >}}
+{{< img link="https://i.imgur.com/KNhHKPa.jpg" src="https://i.imgur.com/KNhHKPa.jpg" title="今回乗車したサンライズ瀬戸" >}}
 
 ---
 
@@ -266,7 +266,7 @@ MUSEUMとはあるが、一軒家程度の大きさ。ただし建物自体も�
 前日のサンライズ瀬戸でよく眠れなかったため、この時点で疲れが溜まっていた。  
 事前のリサーチ不足もあり、あまり時間をかけて鑑賞できなかった。
 
-{{< img link="/images/2020-10-13-travel-kagawa-01-03.JPG" src="/images/2020-10-13-travel-kagawa-01-03.JPG" title="栗林公園" >}}
+{{< img link="https://i.imgur.com/qxQYGTJ.jpeg" src="https://i.imgur.com/qxQYGTJ.jpeg" title="栗林公園" >}}
 
 #### 栗林公園→琴平駅
 
