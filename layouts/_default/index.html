@@ -6,7 +6,7 @@
   {{ partial "header.html" . }}
   <main class="content" role="main">
     <section id="first-section">
-      <h5 id="top-section-name">RECENT POSTS</h5>
+      <h5 id="top-section-name">POSTS</h5>
       <ul>
         {{ range first 5 .Paginator.Pages}}
         {{ .Render "li" }}
