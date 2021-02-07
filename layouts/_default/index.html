@@ -6,7 +6,7 @@
   {{ partial "header.html" . }}
   <main class="content" role="main">
     <section id="first-section">
-      <h5 id="top-section-name">POSTS</h5>
+      <h5 id="top-section-name">投稿一覧</h5>
       <ul>
         {{ range first 5 .Paginator.Pages}}
         {{ .Render "li" }}
@@ -15,11 +15,7 @@
       </ul>
     </section>
     <section id="second-section">
-      <h5 id="top-section-name">ABOUT ME</h5>
-      <dl>
-        <dt><a href="https://twitter.com/tayu_tayu">Twitter</a> </dt>
-        <dt><a href="https://www.youtube.com/channel/UCA7-eFymDhBVgq_Rdmo2RpA">YouTube</a></dt>
-      </dl>
+
 
     </section>
   </main>
