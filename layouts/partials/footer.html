@@ -1,13 +1,14 @@
 <footer id="site-footer">
   <div class="container">
     {{ with .Site.Params.twitter_name }}
-    <a href="https://www.twitter.com/{{ . }}" title="Twitter" target="_blank"><span class="tooltip"><i class="fa fa-twitter"></i></span></a>
+    <a href="https://www.twitter.com/{{ . }}" title="Twitter" target="_blank"><span class="tooltip"><i class="fab fa-twitter"></i></span></a>
+    {{ end }}
+    {{ with .Site.Params.youtube_url }}
+    <a href="{{ . }}" title="YouTube" target="_blank"><span class="tooltip"><i class="fab fa-youtube"></i></span></a>
     {{ end }}
     <a href="{{ .Site.BaseURL }}index.xml" title="Get the RSS feed"><span class="tooltip"><i class="fa fa-rss"></i></span></a>
     <section>
-      &copy; 2020
-      <a href="https://www.twitter.com/{{ .Site.Params.twitter_name }}" title="{{ .Site.Params.author }}" target="_blank">{{ .Site.Params.author }}</a> |
-      <a href="http://gohugo.io/">Hugo</a>
+      <small>&copy; 2020 {{ .Site.Params.author }} | <a href="http://gohugo.io/">Hugo</a></small>
     </section>
   </div>
 </footer>
