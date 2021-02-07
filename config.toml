@@ -12,6 +12,7 @@ preserveTaxonomyNam5es = true
   SEOTitle = "tayu-tayu.me"
   description = "日々の思ったことやメモをまとめたサイトです。"
   twitter_name = "tayu_tayu"
+  youtube_url = "https://www.youtube.com/channel/UCA7-eFymDhBVgq_Rdmo2RpA"
 
   og_image = "images/thumbnails/default.png"
 
@@ -20,7 +21,7 @@ preserveTaxonomyNam5es = true
   omit_categories = false
 
   # leancloud storage for page view counter
-  page_view_conter = false
+  page_view_counter = false
   leancloud_app_id = ""
   leancloud_app_key = ""
 
