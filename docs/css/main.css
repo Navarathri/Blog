@@ -269,8 +269,7 @@ pre code {
 }
 
 .post-content a, #site-footer a {
-  color: #333;
-  /* text-decoration: none; */
+  text-decoration: none;
   font-weight: bold;
 }
 
