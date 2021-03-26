@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>game on TAYU-TAYU.ME</title>
+    <title>game on たくあんは食べ物。</title>
     <link>https://www.tayu-tayu.me/tags/game/</link>
-    <description>Recent content in game on TAYU-TAYU.ME</description>
+    <description>Recent content in game on たくあんは食べ物。</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
+    <language>jp</language>
+    <copyright>© {year}</copyright>
     <lastBuildDate>Sat, 17 Oct 2020 13:42:04 +0900</lastBuildDate><atom:link href="https://www.tayu-tayu.me/tags/game/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ゴーストオブツシマ</title>
-      <link>https://www.tayu-tayu.me/post/2020-10-17-ghostoftsushima/</link>
+      <link>https://www.tayu-tayu.me/blog/2020-10-17-ghostoftsushima/</link>
       <pubDate>Sat, 17 Oct 2020 13:42:04 +0900</pubDate>
       
-      <guid>https://www.tayu-tayu.me/post/2020-10-17-ghostoftsushima/</guid>
+      <guid>https://www.tayu-tayu.me/blog/2020-10-17-ghostoftsushima/</guid>
       <description>二周目スタート時の難易度選択画面。「万死＋」を選択した。マルチモードの実装や強くてニューゲームなど、既にクリア済みのユーザも楽しめるようなアップデートが来た。
 PlayStation Plusに加入していないため、マルチモードは暫く様子見。周りの評判が良ければ加入してプレイしてみようと思う。
 強くてニューゲーム（ゲーム上では「二周目」という表記）では、防具や装飾品、札などはそのままに最初からプレイが可能らしい。また、二周目限定の要素が多いようで開始直後から新要素である商人（限定装飾品を販売している）が近くにいた。

@@ -3,7 +3,7 @@ layouts
 static
 
 package.json
-public
+docs
 node_modules
 
 .DS_Store

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on TAYU-TAYU.ME</title>
+    <title>Tags on たくあんは食べ物。</title>
     <link>https://www.tayu-tayu.me/tags/</link>
-    <description>Recent content in Tags on TAYU-TAYU.ME</description>
+    <description>Recent content in Tags on たくあんは食べ物。</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
+    <language>jp</language>
+    <copyright>© {year}</copyright>
     <lastBuildDate>Tue, 02 Feb 2021 13:52:27 +0900</lastBuildDate><atom:link href="https://www.tayu-tayu.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>バイク</title>
@@ -85,6 +86,69 @@
       <pubDate>Mon, 12 Oct 2020 10:40:26 +0900</pubDate>
       
       <guid>https://www.tayu-tayu.me/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://www.tayu-tayu.me/tags/css/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://www.tayu-tayu.me/tags/html/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://www.tayu-tayu.me/tags/markdown/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>math</title>
+      <link>https://www.tayu-tayu.me/tags/math/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shortcodes</title>
+      <link>https://www.tayu-tayu.me/tags/shortcodes/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/tags/shortcodes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>themes</title>
+      <link>https://www.tayu-tayu.me/tags/themes/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/tags/themes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://www.tayu-tayu.me/tags/hugo/</link>
+      <pubDate>Thu, 04 Jun 2020 09:19:29 -0400</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/tags/hugo/</guid>
       <description></description>
     </item>
     

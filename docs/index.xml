@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TAYU-TAYU.ME</title>
+    <title>たくあんは食べ物。</title>
     <link>https://www.tayu-tayu.me/</link>
-    <description>Recent content on TAYU-TAYU.ME</description>
+    <description>Recent content on たくあんは食べ物。</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
+    <language>jp</language>
+    <copyright>© {year}</copyright>
     <lastBuildDate>Tue, 02 Feb 2021 13:52:27 +0900</lastBuildDate><atom:link href="https://www.tayu-tayu.me/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ZOOM H2nの設定</title>
-      <link>https://www.tayu-tayu.me/post/2021-02-02/</link>
+      <link>https://www.tayu-tayu.me/blog/2021-02-02/</link>
       <pubDate>Tue, 02 Feb 2021 13:52:27 +0900</pubDate>
       
-      <guid>https://www.tayu-tayu.me/post/2021-02-02/</guid>
+      <guid>https://www.tayu-tayu.me/blog/2021-02-02/</guid>
       <description>バイク車載動画撮影時のZOOM H2nの設定メモ
    メニュー 設定値     ゲイン 2   録音モード MS STEREO S+6   LO CUT ON   COMP/LIMITER COMP1(GENERAL)   AUTO GAIN OFF   REC FORMAT WAV44.1kHz/16bit    この設定で、ウィンドスクリーンをつけてズボンの後ろポケットに入れる。 ＭＳ側マイクが外側に来るよう（＝ディスプレイが内側）な向きで。</description>
     </item>
     
     <item>
       <title>アニメ視聴履歴</title>
-      <link>https://www.tayu-tayu.me/post/2020-10-23-anime2020/</link>
+      <link>https://www.tayu-tayu.me/blog/2020-10-23-anime2020/</link>
       <pubDate>Fri, 23 Oct 2020 23:10:14 +0900</pubDate>
       
-      <guid>https://www.tayu-tayu.me/post/2020-10-23-anime2020/</guid>
+      <guid>https://www.tayu-tayu.me/blog/2020-10-23-anime2020/</guid>
       <description>アニメを趣味にしてから丸11年が経過した。
 何でも記録に残したがる性分なので、アニメの視聴履歴も11年間欠かさず記録している。
 記録に使用しているツールは以下の2つ。
@@ -42,10 +43,10 @@ Googleカレンダー 日ごとの視聴履歴を記録。
     
     <item>
       <title>ハイキュー!!</title>
-      <link>https://www.tayu-tayu.me/post/2020-10-22-haikyu/</link>
+      <link>https://www.tayu-tayu.me/blog/2020-10-22-haikyu/</link>
       <pubDate>Thu, 22 Oct 2020 22:05:16 +0900</pubDate>
       
-      <guid>https://www.tayu-tayu.me/post/2020-10-22-haikyu/</guid>
+      <guid>https://www.tayu-tayu.me/blog/2020-10-22-haikyu/</guid>
       <description>1週間で最新話まで一気見した過去にリアルタイムで1期は観ていて原作も21巻あたりまでは読んでいたが、話をほとんど忘れていたので最初から見直した。
 細かい描写が丁寧なアニメで、自分がバレー経験者なのもあって感動しきりだった。
 特に感動したのは、音。スキール音(床とシューズが擦れる音)が当然のように漏れなく当てられているし、ボールがネットにかかる音もリアル。 また、大会を勝ち進んで会場が変わった際の設備の変わり具合も良い。大きな会場に行くと良い設備が増え、またホイッスル音も変わる。それがしっかり描写されていた。（複数面のコートで試合を行う場合はコート毎にホイッスルの音を変えるはずだが、その描写はなかった気がする。そもそも複数コートの試合を同時に描写していなかったからかもしれないが。）
@@ -55,10 +56,10 @@ Googleカレンダー 日ごとの視聴履歴を記録。
     
     <item>
       <title>ゴーストオブツシマ</title>
-      <link>https://www.tayu-tayu.me/post/2020-10-17-ghostoftsushima/</link>
+      <link>https://www.tayu-tayu.me/blog/2020-10-17-ghostoftsushima/</link>
       <pubDate>Sat, 17 Oct 2020 13:42:04 +0900</pubDate>
       
-      <guid>https://www.tayu-tayu.me/post/2020-10-17-ghostoftsushima/</guid>
+      <guid>https://www.tayu-tayu.me/blog/2020-10-17-ghostoftsushima/</guid>
       <description>二周目スタート時の難易度選択画面。「万死＋」を選択した。マルチモードの実装や強くてニューゲームなど、既にクリア済みのユーザも楽しめるようなアップデートが来た。
 PlayStation Plusに加入していないため、マルチモードは暫く様子見。周りの評判が良ければ加入してプレイしてみようと思う。
 強くてニューゲーム（ゲーム上では「二周目」という表記）では、防具や装飾品、札などはそのままに最初からプレイが可能らしい。また、二周目限定の要素が多いようで開始直後から新要素である商人（限定装飾品を販売している）が近くにいた。
@@ -67,10 +68,10 @@ PlayStation Plusに加入していないため、マルチモードは暫く様�
     
     <item>
       <title>香川</title>
-      <link>https://www.tayu-tayu.me/post/2020-10-13-travel-kagawa-01/</link>
+      <link>https://www.tayu-tayu.me/blog/2020-10-13-travel-kagawa-01/</link>
       <pubDate>Tue, 13 Oct 2020 22:01:41 +0900</pubDate>
       
-      <guid>https://www.tayu-tayu.me/post/2020-10-13-travel-kagawa-01/</guid>
+      <guid>https://www.tayu-tayu.me/blog/2020-10-13-travel-kagawa-01/</guid>
       <description>旅の目的 旅の目的は、寝台特急 サンライズ出雲・瀬戸に乗ること。
 出雲は今年１月に行ったので、今回は「サンライズ瀬戸」に乗車。
 目的地が異なるだけで、車両自体に大きな違いはない。
@@ -82,13 +83,52 @@ PlayStation Plusに加入していないため、マルチモードは暫く様�
     
     <item>
       <title>ブログを作った</title>
-      <link>https://www.tayu-tayu.me/post/2020-10-12-build-personal-blog/</link>
+      <link>https://www.tayu-tayu.me/blog/2020-10-12-build-personal-blog/</link>
       <pubDate>Mon, 12 Oct 2020 10:40:26 +0900</pubDate>
       
-      <guid>https://www.tayu-tayu.me/post/2020-10-12-build-personal-blog/</guid>
+      <guid>https://www.tayu-tayu.me/blog/2020-10-12-build-personal-blog/</guid>
       <description>トップページブログサービスを利用しても良かったが、勉強のため個人ブログにした。
 GitHubでソース管理し、Netlifyでホスティングしている。
 ドメインはRoute53で購入し、年額17$＋α。</description>
+    </item>
+    
+    <item>
+      <title>Markdown Syntax Guide</title>
+      <link>https://www.tayu-tayu.me/blog/markdown-syntax-guide/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/blog/markdown-syntax-guide/</guid>
+      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Math Typesetting</title>
+      <link>https://www.tayu-tayu.me/blog/math-typesetting/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/blog/math-typesetting/</guid>
+      <description>&lt;p&gt;Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Rich Content</title>
+      <link>https://www.tayu-tayu.me/blog/rich-text/</link>
+      <pubDate>Fri, 05 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/blog/rich-text/</guid>
+      <description>Hugo ships with several Built-in Shortcodes for rich content, along with a Privacy Config and a set of Simple Shortcodes that enable static and no-JS versions of various social media embeds.
+YouTube Privacy Enhanced Shortcode   Twitter Simple Shortcode “In addition to being more logical, asymmetry has the advantage that its complete appearance is far more optically effective than symmetry.”
+— Jan Tschichold pic.twitter.com/gcv7SrhvJb
+&amp;mdash; Graphic Design History (@DesignReviewed) January 17, 2019  Vimeo Simple Shortcode  .</description>
+    </item>
+    
+    <item>
+      <title>Welcome To Codex</title>
+      <link>https://www.tayu-tayu.me/blog/example-post/</link>
+      <pubDate>Thu, 04 Jun 2020 09:19:29 -0400</pubDate>
+      
+      <guid>https://www.tayu-tayu.me/blog/example-post/</guid>
+      <description>The standard Lorem Ipsum passage &amp;ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</description>
     </item>
     
   </channel>

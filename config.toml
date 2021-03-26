@@ -1,8 +1,9 @@
 theme = "hugo-theme-codex"
 title = "たくあんは食べ物。"
-languageCode = "ja-jp"
+languageCode = "jp"
 baseURL = "https://www.tayu-tayu.me/"
 copyright = "© {year}"
+publishDir = "docs"
 
 # Add your Disqus shortname here.
 disqusShortname = "tayu_tayu"
