@@ -1,43 +1,31 @@
-# DO NOT REMOVE THIS
-theme = "hugo-theme-codex" 
-
-# Override these settings with your own
-title = "codex"
-languageCode = "en-us"
-baseURL = "https://example.org/"
+theme = "hugo-theme-codex"
+title = "たくあんは食べ物。"
+languageCode = "ja-jp"
+baseURL = "https://www.tayu-tayu.me/"
 copyright = "© {year}"
 
 # Add your Disqus shortname here.
-# disqusShortname = ""
+disqusShortname = "tayu_tayu"
 
 # Add your Google Analytics identifier: UA-XXXXXXXX-X
-# googleAnalytics = "" 
+# googleAnalytics = ""
 
 # Optional params
 [params]
-  # Follow the Hugo date/time format reference here: 
-  # https://gohugo.io/functions/format/#gos-layout-string
-  dateFormat = "Jan 2 2006"
+  # 参考サイト：https://gohugo.io/functions/format/#gos-layout-string
+  dateFormat = "2006-01-02"
 
   # Links to your social accounts, comment/uncomment as needed. Icons will be displayed for those specified.
-  twitter = "https://twitter.com/<your handle>"
-  github = "https://github.com/<your handle>"
-  # email = "mailto:<your email>"
-  # mastodon = "https://mastodon.social/@nickname"
-  # facebook = "https://facebook.com/<your handle>"
-  # gitlab = "https://gitlab.com/<your handle>"
-  # instagram = "https://instagram.com/<your handle>"
-  # linkedin = "<link to your profile>"
-  # youtube = "https://www.youtube.com/channel/<your channel>"
-  
-  # Titles for your icons (shown as tooltips), and also their display order.
-  # Currently, these icons are supported: 
-  #   "Twitter", "GitHub", "Email", "Mastodon", "Facebook", "GitLab", "Instagram", "LinkedIn", "YouTube"
-  iconOrder = ["Twitter", "GitHub"]
+  twitter = "https://twitter.com/tayu_tayu"
+  YouTube = "https://www.youtube.com/channel/UCA7-eFymDhBVgq_Rdmo2RpA"
+
+  # タイトルに表示するアイコンリスト
+  # "Twitter", "GitHub", "Email", "Mastodon", "Facebook", "GitLab", "Instagram", "LinkedIn", "YouTube"
+  iconOrder = ["Twitter", "YouTube"]
 
   # Metadata for Twitter cards, defaults to params.twitter
-  # twitterSite = "@<your handle>"
-  # twitterAuthor = "@<your handle>"
+  twitterSite = "@tayu_tayu"
+  twitterAuthor = "@tayu_tayu"
 
   # Set to true to display page title in table of contents in blog posts.
   showPageTitleInTOC = false
@@ -49,16 +37,16 @@ copyright = "© {year}"
 [markup]
   [markup.highlight]
     codeFences = false
-    
+
   # Set to false to disallow raw HTML in markdown files
   [markup.goldmark.renderer]
       unsafe = true
 
 # Controls the navigation
 [[menu.main]]
-  identifier = "about"
-  name = "about"
-  title = "About"
+  identifier = "home"
+  name = "home"
+  title = "home"
   url = "/"
 
 [[menu.main]]
@@ -66,6 +54,3 @@ copyright = "© {year}"
   name = "blog"
   title = "Blog"
   url = "/blog"
-
-
-
