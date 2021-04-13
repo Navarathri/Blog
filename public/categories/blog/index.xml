@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog on たくあんは食べ物。</title>
+    <link>http://localhost:1313/categories/blog/</link>
+    <description>Recent content in blog on たくあんは食べ物。</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 02 Feb 2021 13:52:27 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ZOOM H2nの設定</title>
+      <link>http://localhost:1313/posts/2021-02-02/</link>
+      <pubDate>Tue, 02 Feb 2021 13:52:27 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/2021-02-02/</guid>
+      <description>バイク車載動画撮影時のZOOM H2nの設定メモ メニュー 設定値 ゲイン 2 録音モード MS STEREO S+6 LO CUT ON COMP/LIMITER COMP1(GENERAL) AUTO GAIN OFF REC FORMAT WAV44.1kHz/16bit この設定で、ウィンドスクリーンをつけてズボンの後ろポケットに入れる。 ＭＳ側マイクが外側に来るよ</description>
+    </item>
+    
+    <item>
+      <title>アニメ視聴履歴</title>
+      <link>http://localhost:1313/posts/2020-10-23-anime2020/</link>
+      <pubDate>Fri, 23 Oct 2020 23:10:14 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-23-anime2020/</guid>
+      <description>アニメを趣味にしてから丸11年が経過した。 何でも記録に残したがる性分なので、アニメの視聴履歴も11年間欠かさず記録している。 記録に使用しているツールは以下の2つ。 サービス終了の可能性が少ないかどうかで</description>
+    </item>
+    
+    <item>
+      <title>ハイキュー!!</title>
+      <link>http://localhost:1313/posts/2020-10-22-haikyu/</link>
+      <pubDate>Thu, 22 Oct 2020 22:05:16 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-22-haikyu/</guid>
+      <description>1週間で最新話まで一気見した 過去にリアルタイムで1期は観ていて原作も21巻あたりまでは読んでいたが、話をほとんど忘れていたので最初から見直した。 細かい描写が丁寧なアニメで、自分がバレー経験者なのもあっ</description>
+    </item>
+    
+    <item>
+      <title>香川</title>
+      <link>http://localhost:1313/posts/2020-10-13-travel-kagawa-01/</link>
+      <pubDate>Tue, 13 Oct 2020 22:01:41 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-13-travel-kagawa-01/</guid>
+      <description>旅の目的 旅の目的は、寝台特急 サンライズ出雲・瀬戸に乗ること。 出雲は今年１月に行ったので、今回は「サンライズ瀬戸」に乗車。 目的地が異なるだけで、車両自体に大きな違いはない。 今回乗車したサンライズ瀬戸 旅の</description>
+    </item>
+    
+    <item>
+      <title>ブログを作った</title>
+      <link>http://localhost:1313/posts/2020-10-12-build-personal-blog/</link>
+      <pubDate>Mon, 12 Oct 2020 10:40:26 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-12-build-personal-blog/</guid>
+      <description>トップページ ブログサービスを利用しても良かったが、勉強のため個人ブログにした。 GitHubでソース管理し、Netlifyでホスティングしている。 ドメインはRoute53で購入し、年額17$＋α。</description>
+    </item>
+    
+  </channel>
+</rss>

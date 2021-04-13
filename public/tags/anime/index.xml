@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>anime on たくあんは食べ物。</title>
+    <link>http://localhost:1313/tags/anime/</link>
+    <description>Recent content in anime on たくあんは食べ物。</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Fri, 23 Oct 2020 23:10:14 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/anime/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>アニメ視聴履歴</title>
+      <link>http://localhost:1313/posts/2020-10-23-anime2020/</link>
+      <pubDate>Fri, 23 Oct 2020 23:10:14 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-23-anime2020/</guid>
+      <description>アニメを趣味にしてから丸11年が経過した。 何でも記録に残したがる性分なので、アニメの視聴履歴も11年間欠かさず記録している。 記録に使用しているツールは以下の2つ。 サービス終了の可能性が少ないかどうかで</description>
+    </item>
+    
+    <item>
+      <title>ハイキュー!!</title>
+      <link>http://localhost:1313/posts/2020-10-22-haikyu/</link>
+      <pubDate>Thu, 22 Oct 2020 22:05:16 +0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/2020-10-22-haikyu/</guid>
+      <description>1週間で最新話まで一気見した 過去にリアルタイムで1期は観ていて原作も21巻あたりまでは読んでいたが、話をほとんど忘れていたので最初から見直した。 細かい描写が丁寧なアニメで、自分がバレー経験者なのもあっ</description>
+    </item>
+    
+  </channel>
+</rss>
