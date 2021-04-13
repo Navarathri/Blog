@@ -1,9 +1,10 @@
+publishDir = "docs"
 baseURL = "http://localhost:1313/"
 languageCode = "ja-jp"
 defaultContentLanguage = "ja-jp"
 title = "たくあんは食べ物。"
 theme = "zozo"
-hasCJKLanguage = true                  # has chinese/japanese/korean ? 
+hasCJKLanguage = true                  # has chinese/japanese/korean ?
 summaryLength = 100
 paginate = 5                         # shows the number of articles
 enableEmoji = true
@@ -13,6 +14,8 @@ disqusShortname = ""
 pygmentsUseClasses = true
 pygmentCodeFences = true
 pygmentscodefencesguesssyntax = true
+
+
 
 [author]
   name = "tayu_tayu"
@@ -43,13 +46,13 @@ pygmentscodefencesguesssyntax = true
 
 [params]
   subTitle = "the site subtitle"
-  footerSlogan = "#.Navarathri-"           
-  keywords = ["Hugo","theme","zozo"]           
+  footerSlogan = "#.Navarathri-"
+  keywords = ["Hugo","theme","zozo"]
   description = "Hugo theme zozo example site."
-  enableMathJax = true                         
-  enableSummary = true                         
+  enableMathJax = true
+  enableSummary = true
   mainSections = ["posts","post"]
-  
+
 [params.valine]
   enable = false
   appId = ""
